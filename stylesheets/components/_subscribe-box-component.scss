@@ -1,0 +1,255 @@
+@import '~/stylesheets/common/_shared.scss';
+
+.subscribe-box-component {
+  .inbox {
+    width: 100%;
+    background-color: #35312E;
+    padding: 15px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+
+    &:after {
+      content: '';
+      display: table;
+      clear: both;
+    }
+
+    .submit-done {
+      font-size: 2em;
+      color: #fff;
+      font-weight: 300;
+      width: 76%;
+      font-family: 'TT Norms';
+      margin-left: 3%;
+    }
+
+    .close-icon {
+      position: absolute;
+      right: 9%;
+      top: 15%;
+    }
+
+    .text-area {
+      color: #fff;
+      margin: auto;
+      flex-basis: 45%;
+
+
+      h2 {
+        color: #FFFFFF;
+        font-size: 32px;
+        line-height: 40px;
+        font-family: 'TT Norms';
+        font-weight: normal;
+        font-size: 2rem;
+
+        span {
+          @include blavity-use-font-miller-display-bold-italic;
+          letter-spacing: 1px;
+        }
+      }
+
+      .text-area-wrap {
+        margin: 10px 0 10px auto;
+
+
+        .emil-input-wrap {
+          position: relative;
+
+          .email-input {
+            background: transparent;
+            border: 0;
+            border-bottom: 2px solid #fff;
+            padding-bottom: 10px;
+            color: #999999;
+            width: 100%;
+            margin-bottom: 15px;
+            font-family: 'TT Norms';
+
+            &:focus {
+              outline: 0;
+            }
+          }
+
+          .btn_submit {
+            background: transparent;
+            border: none;
+            position: absolute;
+            top: 3px;
+            right: 0;
+            cursor: pointer;
+
+            &:focus {
+              outline: 0;
+            }
+
+            img {
+              height: 15px;
+              &.mob_right{
+                display: none;
+              }
+            }
+
+            a {
+              text-decoration: none;
+            }
+          }
+        }
+
+        .input-wrap {
+          display: flex;
+          align-items: center;
+          margin-bottom: 10px;
+
+          .checkbox-input {
+            margin-right: 10px;
+          }
+
+          .checkbox-input-text {
+            font-size: 12px;
+            color: #fff;
+            font-weight: 500;
+            letter-spacing: 0.8px;
+            user-select: none;
+
+            a {
+              color: #fff;
+            }
+          }
+        }
+      }
+
+      .error-text {
+        color: #ff542f;
+        font-size: 12px;
+      }
+    }
+  }
+
+  .inbox__light {
+    padding: 15px;
+    display: flex;
+    height: auto;
+    width: 100%;
+    flex-direction: column;
+    background: transparent;
+    color: #D8D8D8;
+    @include grid-media($blavity-grid-mobile-configuration) {
+      max-width: 463px;
+    }
+
+
+    .text-area {
+      color: #fff;
+      margin: auto;
+      width: 100%;
+
+
+      h2 {
+        font-weight: normal;
+        color: #000;
+        margin: 0;
+        text-align: center;
+        line-height: initial;
+        font-size: 1.5rem;
+        font-family: 'TT Norms';
+      }
+
+      .text-area-wrap {
+        width: 345px;
+        margin: auto;
+        margin-top: 20px;
+
+        .emil-input-wrap {
+          position: relative;
+
+          .email-input {
+            background: transparent;
+            border-bottom: 2px solid #000;
+            padding-bottom: 10px;
+            border-top: 0px;
+            border-left: 0px;
+            border-right: 0px;
+            color: #999999;
+            width: 100%;
+            margin-bottom: 15px;
+            outline: none;
+            font-family: 'TT Norms';
+          }
+
+          span {
+            position: absolute;
+            top: 3px;
+            right: 0;
+            padding: 0;
+
+            img {
+              height: 15px;
+            }
+
+            a {
+              text-decoration: none;
+            }
+          }
+        }
+
+        .btn_submit {
+          background: transparent;
+          border: none;
+          position: absolute;
+          top: 3px;
+          right: 0;
+          cursor: pointer;
+
+          &:focus {
+            outline: 0;
+          }
+
+          img {
+            height: 15px;
+            //content: url('');
+            &.mob_right{
+              display: block;
+            }
+            &.right-img{
+              display: none;
+            }
+          }
+
+          a {
+            text-decoration: none;
+          }
+        }
+
+        .input-wrap {
+          display: flex;
+          align-items: center;
+          margin-bottom: 10px;
+
+          .checkbox-input {
+            margin-right: 10px;
+          }
+
+          .checkbox-input-text {
+            font-size: 12px;
+            color: #000;
+
+            a {
+              color: #000;
+            }
+          }
+        }
+      }
+
+      .error-text {
+        color: #ff542f;
+        font-size: 12px;
+      }
+
+    }
+  }
+}

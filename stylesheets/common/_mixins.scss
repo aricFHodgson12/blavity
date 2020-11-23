@@ -1,0 +1,20 @@
+@mixin _blavity-set-up-font($font-family, $font-weight, $font-style) {
+  font-family: $font-family;
+  font-style: $font-style;
+  font-weight: $font-weight;
+}
+
+// TT Norms Regular
+@mixin blavity-use-font-tt-norms-regular() {
+  @include _blavity-set-up-font('TT Norms', normal, normal);
+}
+
+// TT Norms Light
+@mixin blavity-use-font-tt-norms-light() {
+  @include _blavity-set-up-font('TT Norms', 500, normal);
+}
+
+// MillerDisplay-SemiboldItalic
+@mixin blavity-use-font-miller-display-bold-italic() {
+  @include _blavity-set-up-font('MillerDisplay', 700, italic);
+}

@@ -1,0 +1,85 @@
+env:
+  browser: true
+  commonjs: true
+  es6: true
+  jquery: true
+  node: true
+  shared-node-browser: true
+extends:
+- eslint:recommended
+- plugin:vue/recommended
+- standard
+parserOptions:
+  ecmaFeatures:
+    globalReturn: false
+    impliedStrict: true
+    jsx: false
+  ecmaVersion: 6
+  parser: babel-eslint
+  sourceType: module
+plugins:
+- vue
+- promise
+- standard
+root: true
+rules:
+  no-console: 1
+  no-debugger: 2
+  no-useless-computed-key: 2
+  no-useless-escape: 0
+  operator-linebreak: 0
+  padding-line-between-statements: 0
+  vue/no-use-v-if-with-v-for:
+  - 2
+  - allowUsingIterationVar: false
+  vue/v-bind-style:
+  - 2
+  - shorthand
+  vue/order-in-components:
+  - 2
+  - order:
+    - el
+    - name
+    - parent
+    - functional
+    - - delimiters
+      - comments
+    - - components
+      - directives
+      - filters
+    - extends
+    - mixins
+    - inheritAttrs
+    - model
+    - - props
+      - propsData
+    - data
+    - computed
+    - watch
+    - LIFECYCLE_HOOKS
+    - methods
+    - - template
+      - render
+    - renderError
+  vue/no-v-html: 0
+  space-unary-ops:
+  - 2
+  - nonwords: true
+    words: true
+  vue/html-self-closing:
+  - 2
+  - html:
+      component: never
+      normal: never
+      void: never
+    math: never
+    svg: never
+  vue/max-attributes-per-line:
+  - 2
+  - multiline:
+      allowFirstLine: false
+      max: 1
+    singleline: 1
+  vue/name-property-casing:
+  - 2
+  - kebab-case

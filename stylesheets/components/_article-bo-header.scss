@@ -1,0 +1,180 @@
+@import '~/stylesheets/common/_shared.scss';
+
+.article-bo-header {
+    width: 100%;
+    height: 650px;
+    position: absolute;
+    font-family: 'TT Norms';
+    top: 0;
+    @include grid-media($blavity-grid-desktop-configuration){
+        height: 1000px;
+    }
+
+    #overlay {
+        position: absolute;
+        width: 100%;
+        height: 40%;
+        top: 390px;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        opacity: 0.75;
+        background: linear-gradient(180deg, rgba(0,0,0,0) 0%, #000000 100%);
+        z-index: 2;
+
+        @include grid-media($blavity-grid-desktop-configuration){
+            top: 0px;
+            height: 800px;
+        }
+    }
+  &__content-wrapper {
+    width: 100%;
+    overflow: hidden;
+  }
+    &__article-img {
+        z-index: 1;
+        display: flex;
+        flex-direction: column;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        width: 100vw;
+        height: 700px;
+        box-shadow: inset 0 0 200px black;
+        margin-top: 0;
+        margin-left: 0;
+
+        @include grid-media($blavity-grid-desktop-configuration){
+            height: 800px;
+        }
+    }
+
+
+    &__article-info {
+        order: 1;
+        position: absolute;
+        width: 350px;
+        margin-top: 330px;
+        margin-left: 15px;
+        text-align: center;
+        z-index: 2;
+        color: white;
+
+        @include grid-media($blavity-grid-tablet-configuration){
+            margin-top: 330px;
+            margin-left: 27%;
+        }
+
+        @include grid-media($blavity-grid-desktop-configuration){
+            width: 690px;
+            margin-top: 353px;
+            margin-left: 128px;
+            text-align: left;
+        }
+
+        &__category {
+            text-transform: capitalize;
+            font-weight: 500;
+            font-size: 14px;
+            letter-spacing: 1px;
+            line-height: 15px;
+            margin-bottom: 17px;
+            height: 15px;
+            overflow: hidden;
+
+        }
+
+        &__title {
+            display: flex;
+            font-weight: normal;
+            font-size: 30px;
+            line-height: 36px;
+            margin-bottom: 18px;
+            text-shadow: 0 2px 12px 0 rgba(0,0,0,0.5);
+
+            @include grid-media($blavity-grid-desktop-configuration){
+                align-content: space-around;
+                font-size: 40px;
+                line-height: 56px;
+                margin-bottom: 14px;
+            }
+
+        }
+
+        &__subtitle {
+          display: flex;
+          font-weight: normal;
+          font-size: 14px;
+          margin-bottom: 18px;
+          text-shadow: 0 2px 12px 0 rgba(0,0,0,0.5);
+
+          @include grid-media($blavity-grid-desktop-configuration){
+            font-size: 16px;
+            margin-bottom: 14px;
+          }
+        }
+
+        &__imgSrc {
+            height: 15px;
+            font-size: 12px;
+            font-weight: 500;
+            line-height: 15px;
+        }
+    }
+
+    &__author-info {
+        order: 2;
+        visibility: hidden;
+        z-index: 2;
+
+        @include grid-media($blavity-grid-desktop-configuration){
+            visibility: visible;
+            order: 2;
+            display: flex;
+            flex-direction: row;
+            position: absolute;
+            width: 150px;
+            margin-top: 600px;
+            margin-left: 77%;
+        }
+
+        @include grid-media($blavity-grid-large-display-configuration){
+            margin-left: 83%;
+        }
+
+        }
+
+
+}
+.article-bo-header__author-info {
+  display: flex;
+  align-content: center;
+  justify-content: flex-end;
+  width: 86%;
+  margin-top: 25%;
+
+  @include grid-media($blavity-grid-large-display-configuration){
+      width: 52vw;
+  }
+}
+.article-bo-header__author-info__text {
+  order: 2;
+  display: inline-flex;
+  margin-top: 10px;
+}
+
+.article-bo-header__author-info__text__by {
+  margin-right: 5px;
+}
+img.article-bo-header__author-info__avatar {
+  @include grid-media($blavity-grid-desktop-configuration) {
+    order: 1;
+    border-radius: 50%;
+    height: 40px;
+    width: 40px;
+    object-fit: cover;
+    object-position: top;
+    margin-right: 7px;
+    box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.25);
+  }
+}

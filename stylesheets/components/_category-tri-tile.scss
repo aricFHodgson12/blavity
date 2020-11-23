@@ -1,0 +1,86 @@
+@import '~/stylesheets/common/_shared.scss';
+
+.category-tri-tile {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  margin-bottom: 2rem;
+  @include grid-media($blavity-grid-desktop-configuration) {
+    max-width: 918px;
+  }
+  &__slot {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-left: 1.5rem;
+  }
+
+  &__slot {
+    @include grid-media($blavity-grid-mobile-configuration) {
+      max-width: 110vw;
+
+      &__left {
+
+
+          }
+        }
+    }
+
+  &__slot {
+    @include grid-media($blavity-grid-desktop-configuration) {
+      flex-direction: row;
+      margin-bottom: 12rem;
+      &__left {
+        align-self: flex-start;
+
+        .top-stories-tile {
+          max-width: 560px;
+          margin: 0 1rem;
+          &__img {
+            &__fluid {
+              width: 510px;
+              height: 380px;
+              object-fit: cover;
+            }
+          }
+
+          &__desc {
+            &__tile-category {
+              font-size: 12px;
+              font-weight: 500;
+              letter-spacing: 1px;
+              line-height: 15px;
+              min-height: 18px;
+              a {
+               text-decoration: none;
+              }
+            }
+
+            &__tile-title {
+              width: 500px;
+              height: 157px;
+              color: #000000;
+              font-family: "TT Norms";
+              font-size: 40px;
+              font-weight: 400;
+              line-height: 52px;
+
+              a {
+                text-decoration: none;
+                color: #000000;
+              }
+            }
+          }
+        }
+      }
+
+      &__right {
+        align-self: flex-start;
+        margin-top: 0;
+        min-width: 20%;
+      }
+    }
+  }
+}

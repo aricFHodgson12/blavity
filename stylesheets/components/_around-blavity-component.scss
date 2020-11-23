@@ -1,0 +1,60 @@
+@import '~/stylesheets/common/_shared.scss';
+
+.around-blavity-container{
+  width: 300px;
+  font-family: 'TT Norms';
+
+  .around-blavity-title{
+    font-size: 24px;
+    border-bottom: 2px solid #000;
+    text-align: center;
+    margin-top: 40px;
+    padding: 15px;
+    font-weight: 400;
+  }
+  .site-logo-afrotech{
+    max-width: 3rem;
+    // height: 24px;
+    flex-basis: 15%
+  }
+  .site-logo-tn{
+  max-width: 2.5rem;
+    // height: 24px;
+    flex-basis: 15%
+  }
+  .site-logo-sa{
+    max-width: 2.5rem;
+    // height: 24px;
+    flex-basis: 15%
+  }
+  .site-logo-21Ninety{
+    max-width: 2.5rem;
+    // height: 24px;
+    flex-basis: 15%
+  }
+  .site-logo-blavity{
+    max-width: 2.5rem;
+    // height: 11px;
+    flex-basis: 15%
+  }
+
+  .around-blavity-component-card{
+    display: flex;
+    flex-direction: row;
+    border-bottom: 1px solid #35312e38;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .around-blavity-component-card-child{
+    order: 1;
+    padding: 24px 0 24px 20px;
+    margin: 0;
+    text-align: left;
+    flex-basis: 80%;
+  }
+  a.site-link-afrotech,a.site-link-tn,a.site-link-sa,a.site-link-21Ninety,a.site-link-blavity{
+    text-decoration: none;
+    color: black;
+    line-height: 22px;
+  }
+}

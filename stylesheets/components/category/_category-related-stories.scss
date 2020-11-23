@@ -1,0 +1,60 @@
+@import '~/stylesheets/common/_shared.scss';
+
+.category-related-stories {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  max-width: 326px;
+  @include grid-media($blavity-grid-desktop-configuration) {
+    align-items: stretch;
+  }
+
+  &__items {
+    width: 95%;
+    .cat-item {
+      display: flex;
+      flex-direction: column;
+      height: 19rem;
+      max-height: 20rem;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-bottom: 20px;
+      padding-bottom: 20px;
+
+      &__featured {
+        max-width: 90%;
+        height: 210px;
+        &__article-image {
+          max-width: 100%;
+          height: 210px;
+          object-fit: cover;
+          align-self: flex-start;
+        }
+      }
+
+      &__content {
+        max-width: 95%;
+        align-self: flex-start;
+        &__headline {
+          font-size: 14px;
+          color: #FF542F;
+          margin-top: 10px;
+          margin-bottom: 15px;
+          letter-spacing: 1px;
+          @include blavity-use-font-tt-norms-light();
+        }
+        a {
+          text-decoration: none;
+        }
+        &__text {
+          margin: 0;
+          font-size: 16px;
+          color: #000;
+          line-height: 1.2;
+          @include blavity-use-font-tt-norms-regular();
+        }
+      }
+    }
+  }
+}

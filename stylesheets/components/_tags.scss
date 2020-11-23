@@ -1,0 +1,11 @@
+@import '~/stylesheets/common/_shared.scss';
+
+.tags {
+    display: flex;
+    flex-wrap: wrap;
+    .tag{
+      text-decoration: none;
+      color: #FF542F;
+      cursor: pointer;
+    }
+}

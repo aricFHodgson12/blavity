@@ -1,0 +1,144 @@
+@import '~/stylesheets/common/_shared.scss';
+
+.home-videos {
+  padding: 3rem 0;
+
+  @include grid-media($blavity-grid-desktop-configuration) {
+    padding: 4rem 0;
+  }
+
+  img {
+    max-width: 100%;
+  }
+
+  .container {
+    padding-left: 25px;
+    padding-right: 25px;
+
+    @include grid-media($blavity-grid-mobile-configuration) {
+      padding-left: 25px;
+      padding-right: 25px;
+    }
+
+    @include grid-media($blavity-grid-tablet-configuration) {
+      padding-left: 3rem;
+      padding-right: 3rem;
+    }
+
+    @include grid-media($blavity-grid-desktop-configuration) {
+      padding-left: 6rem;
+      padding-right: 6rem;
+    }
+
+    @include grid-media($blavity-grid-large-display-configuration) {
+      padding-left: 6rem;
+      padding-right: 6rem;
+    }
+  }
+
+  .grid-container {
+    @include grid-container();
+  }
+
+  .grid-row {
+    @include grid-container();
+
+    display: flex;
+    flex-wrap: wrap;
+
+    @include grid-media($blavity-grid-default-configuration, $blavity-grid-mobile-configuration, $blavity-grid-tablet-configuration, $blavity-grid-desktop-configuration, $blavity-grid-large-display-configuration) {
+      @include grid-collapse();
+    }
+  }
+
+  .section-title {
+    @include blavity-use-font-tt-norms-light();
+
+    font-size: 1.5rem;
+    font-weight: 400;
+    margin-bottom: 2rem;
+    text-align: center;
+
+    @include grid-media($blavity-grid-desktop-configuration) {
+      font-size: 2rem;
+    }
+  }
+
+  .large-card-container {
+    @include grid-media($blavity-grid-desktop-configuration, $blavity-grid-large-display-configuration) {
+      @include grid-column(8);
+    }
+  }
+
+  .small-cards-container {
+    @include grid-media($blavity-grid-default-configuration, $blavity-grid-mobile-configuration, $blavity-grid-tablet-configuration, $blavity-grid-desktop-configuration, $blavity-grid-large-display-configuration) {
+      @include grid-column(4);
+    }
+    @include grid-media($blavity-grid-desktop-configuration, $blavity-grid-large-display-configuration) {
+      max-height : 500px;
+      overflow: scroll;
+    }
+  }
+
+  .home-videos__mobile {
+    margin-left: -25px;
+    margin-right: -25px;
+    margin-bottom: 2rem;
+
+    @include grid-media($blavity-grid-mobile-configuration) {
+      margin-left: -25px;
+      margin-right: -25px;
+    }
+
+    @include grid-media($blavity-grid-tablet-configuration) {
+      margin-left: -3rem;
+      margin-right: -3rem;
+    }
+
+    .slick-list {
+      padding-left: calc(25px - .5rem);
+
+      @include grid-media($blavity-grid-mobile-configuration) {
+        padding-left: calc(25px - .5rem);
+      }
+
+      @include grid-media($blavity-grid-tablet-configuration) {
+        padding-left: calc(3rem - .5rem);
+      }
+    }
+
+    .slick-slide {
+      width: 75vw;
+    }
+  }
+
+  .home-videos__desktop {
+    margin-bottom: 3rem;
+
+    .video-small-card {
+      margin-bottom: 1rem;
+      padding-bottom: 1rem;
+
+      &:not(.video-small-card__active) {
+        border-bottom: 1px solid #CCCBCB;
+      }
+    }
+  }
+
+  .btn-link {
+    @include blavity-use-font-tt-norms-light();
+
+    border: 2px solid #000000;
+    color: #000000;
+    display: block;
+    margin: 0 auto;
+    max-width: 320px;
+    padding: 1rem 0;
+    text-align: center;
+    text-decoration: none;
+
+    .right-arrow {
+      margin-left: .75rem;
+    }
+  }
+}

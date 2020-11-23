@@ -1,0 +1,39 @@
+@import "node_modules/bootstrap/scss/bootstrap";
+
+.page-article-original{
+  #blavity-original-search {
+    background-color: #35312e!important;
+    @media only screen and (min-width:1024px) {
+      background-color: transparent !important;
+    }
+    .form-control{
+    color: #fff!important;
+    font-weight: 600;
+  }
+}
+}
+.search-bar {
+  width: 90vw;
+  position: fixed;
+  height: 3rem;
+  top: 1rem;
+  margin-left: 1.2rem;
+  background-color: #35312e;
+  z-index: 9999999999999999999999;
+  form{
+    .form-row{
+      .form-control{
+        background-color: transparent;
+        border:none;
+        border-bottom: 3px solid white;
+        &:focus{
+          outline-color: white;
+        }
+      }
+      button{
+        color: white;
+        outline-color: invert;
+      }
+    }
+  }
+}

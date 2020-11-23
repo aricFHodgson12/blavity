@@ -1,0 +1,62 @@
+@import '~/stylesheets/common/_shared.scss';
+
+.article-social-bottom {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+
+    h3 {
+        color: #35312E;
+        font-family: 'TT Norms';
+        font-weight: 400;
+        text-align: center;
+
+        @include grid-media($blavity-grid-desktop-configuration) {
+          font-size: 24px;
+          line-height: 40px;
+          text-align: left;
+        }
+    }
+    .share-this-story {
+      order: 1;
+      margin-bottom: 8px;
+
+      @include grid-media($blavity-grid-desktop-configuration) {
+        margin-bottom: 15px;
+      }
+
+    }
+
+    .share-buttons{
+      order: 2;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      @include grid-media($blavity-grid-desktop-configuration) {
+        flex-direction: row;
+      }
+    }
+    .social-sharing-button-wrapper {
+      display: inline-flex;
+      margin-top: 8px;
+    
+
+      @include grid-media($blavity-grid-desktop-configuration) {
+        margin: 0;
+      }
+
+      button {
+        cursor: pointer;
+        height: 48px;
+        width: 334px;
+        outline: none;
+
+        @include grid-media($blavity-grid-desktop-configuration) {
+          height: 56px;
+          width: 244px;
+        }
+
+      }
+    }
+  }

@@ -1,0 +1,63 @@
+@import '~/stylesheets/common/_shared.scss';
+
+.social-sharing-button-wrapper {
+  flex: 1;
+  max-width: 334px;
+}
+
+a.btn-social-sharing {
+  color: #0FADA6;
+}
+
+.btn-social-sharing {
+  cursor: pointer;
+  display: flex;
+  flex: 1;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  border: none;
+  padding: 0;
+
+  &.facebook {
+    background-color: #3C5494;
+
+    &:after {
+      background-image: url(https://storage.googleapis.com/blavitynews/assets/images/social-share/facebook.svg);
+      background-repeat: no-repeat;
+      background-size: 1.5rem;
+      background-position: -1px 0px;
+      content: "Post on Facebook";
+      color: white;
+      font-family: "TT Norms";
+      font-size: 16px;
+      font-weight: 500;
+      line-height: 24px;
+      letter-spacing: 1.2px;
+      padding-left: 30px;
+
+    }
+  }
+
+  &.twitter {
+    background-color: #5CC0FF;
+
+    &:after {
+      background-image: url(https://storage.googleapis.com/blavitynews/assets/images/social-share/twitter.svg);
+      background-repeat: no-repeat;
+      background-size: 1.5rem;
+      background-position: -1px 0px;
+      content: "Tweet this Story";
+      color: white;
+      font-family: "TT Norms";
+      font-size: 16px;
+      font-weight: 500;
+      line-height: 24px;
+      letter-spacing: 1.2px;
+      padding-left: 30px;
+    }
+  }
+}

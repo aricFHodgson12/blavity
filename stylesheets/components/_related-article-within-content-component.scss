@@ -1,0 +1,273 @@
+@import '~/stylesheets/common/_shared.scss';
+
+.related-article-within-content-component {
+  margin: 15px 0;
+
+  .related {
+    @include blavity-use-font-tt-norms-regular;
+
+    border-top: 1px solid #35312e3d;
+    border-bottom: 1px solid #35312e3d;
+    display: flex;
+    padding: 24px 0;
+
+    .related-heading {
+      margin-top: 25px;
+      color: #35212E;
+      font-size: 24px;
+      line-height: 40px;
+
+      h3 {
+        font-weight: 400;
+      }
+    }
+
+    .related-img {
+      margin-left: 1rem;
+
+      .image-wrapper-4x3{
+        max-width: 213px;
+        height: 120px;
+      }
+
+      img {
+        max-width: 213px;
+        height: 120px;
+        object-fit: cover;
+      }
+    }
+
+    .related-text {
+      flex: 2;
+      padding-left: 20px;
+
+      p {
+        font-size: 12px;
+        font-weight: 500;
+        letter-spacing: 1px;
+        line-height: 15px;
+        color: #FF542F;
+        margin-bottom: 10px;
+        text-transform: capitalize;
+      }
+
+      a {
+        text-decoration: none;
+      }
+
+      .related-title {
+        color: #000;
+        text-decoration: none;
+        font-size: 20px;
+        line-height: 32px;
+        @media only screen and (max-width: 1024px) {
+          font-size: 16px;
+        }
+
+      }
+    }
+  }
+
+  .related-mobile {
+    border-top: 1px solid rgba(53, 49, 46, 0.23922);
+    border-bottom: 1px solid rgba(53, 49, 46, 0.23922);
+    display: flex;
+    margin-left: 15px;
+    max-width: 360px;
+    padding: 15px 0;
+    @include blavity-use-font-tt-norms-regular;
+
+    @include grid-media($blavity-grid-tablet-configuration) {
+      max-width: 660px;
+      width: 660px;
+    }
+    @include grid-media($blavity-grid-desktop-configuration) {
+      max-width: 800px;
+      width: 800px;
+    }
+
+    @include grid-media($blavity-grid-large-display-configuration) {
+      max-width: 1000px;
+      width: 1000px;
+    }
+
+    .related-heading {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+
+      h3 {
+        font-weight: normal;
+        font-size: 22px;
+        padding: 0 10px 10px 10px;
+      }
+    }
+
+    .related-img {
+      @include grid-media($blavity-grid-mobile-configuration) {
+        width: 360px;
+        height: 203px;
+      }
+
+        @include grid-media($blavity-grid-tablet-configuration) {
+          width: 660px;
+          height: 371px;
+        }
+
+        @include grid-media($blavity-grid-desktop-configuration) {
+          width: 213px;
+          height: 120px;
+        }
+
+
+      .image-wrapper-4x3{
+        padding-top: 0;
+        max-width: 100%;
+
+        @include grid-media($blavity-grid-mobile-configuration) {
+          width: 360px;
+          height: 203px;
+        }
+
+        @include grid-media($blavity-grid-tablet-configuration) {
+          width: 660px;
+          height: 371px;
+        }
+
+        @include grid-media($blavity-grid-desktop-configuration) {
+          width: 213px;
+          height: 120px;
+        }
+
+      }
+
+        @include grid-media($blavity-grid-tablet-configuration) {
+          width: 660px;
+          height: 371px;
+        }
+
+        @include grid-media($blavity-grid-desktop-configuration) {
+          width: 213px;
+          height: 120px;
+        }
+
+      .image-wrapper-4x3{
+
+        @include grid-media($blavity-grid-mobile-configuration) {
+          width: 360px;
+          height: 203px;
+        }
+
+        @include grid-media($blavity-grid-tablet-configuration) {
+          width: 660px;
+          height: 371px;
+        }
+
+        @include grid-media($blavity-grid-desktop-configuration) {
+          width: 213px;
+          height: 120px;
+        }
+      }
+
+      img {
+        object-fit: contain;
+
+        @include grid-media($blavity-grid-mobile-configuration) {
+          width: 360px;
+          height: 203px;
+        }
+
+        @include grid-media($blavity-grid-tablet-configuration) {
+          width: 660px;
+          height: 371px;
+        }
+
+        @include grid-media($blavity-grid-desktop-configuration) {
+          width: 213px;
+          height: 120px;
+        }
+      }
+    }
+
+    .related-text {
+      padding-left: 10px;
+
+      p {
+        font-size: 12px;
+        font-weight: 500;
+        letter-spacing: 1px;
+        line-height: 15px;
+        color: #FF542F;
+        padding-bottom: 5px;
+      }
+
+      a {
+        font-size: 16px;
+        color: #000;
+        text-decoration: none;
+        line-height: 22px;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 789px) {
+  .related-article-within-content-component {
+    margin-bottom: 10px;
+
+    .related-mobile {
+      @include blavity-use-font-tt-norms-regular;
+
+      display: block;
+      height: 100%;
+      width: 100%;
+      margin: 0;
+
+      .related-heading {
+        display: block;
+        flex-direction: unset;
+        justify-content: unset;
+        width: 100%;
+
+        h3 {
+          font-weight: normal;
+          font-size: 22px;
+          padding: 0 0 10px 0;
+        }
+      }
+
+      .related-img {
+        width: 100%;
+
+        @include grid-media($blavity-grid-tablet-configuration) {
+          max-width: 660px;
+          width: 660px;
+        }
+
+        img {
+          width: 100%;
+          height: auto;
+
+          @include grid-media($blavity-grid-tablet-configuration) {
+            max-width: 660px;
+            width: 660px;
+          }
+        }
+      }
+
+      .related-text {
+        padding-top: 15px;
+        padding-left: 0;
+
+        p {
+          font-size: 12px;
+          padding-bottom: 5px;
+        }
+
+        a {
+          font-size: 14px;
+        }
+      }
+    }
+  }
+}

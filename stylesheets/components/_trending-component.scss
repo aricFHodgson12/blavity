@@ -1,0 +1,47 @@
+@import '~/stylesheets/common/_shared.scss';
+
+.most-popular {
+  width: 280px;
+  font-family: 'TT Norms';
+
+  &__heading {
+    border-bottom: 2px solid #000;
+    text-align: center;
+    margin-top: 40px;
+
+    &_heading-h3 {
+      height: 40px;
+      color: #000000;
+      font-size: 24px;
+      margin: 0px;
+    }
+  }
+
+  &_item {
+    display: flex;
+    padding: 24px 0;
+    border-bottom: 1px solid #35312e38;
+
+    &_number {
+      &_span-number {
+        color: #000000;
+        font-size: 24px;
+        line-height: 22px;
+      }
+    }
+
+    &_detail {
+      a {
+        text-decoration: none;
+      }
+
+      &_p-detail {
+        margin: 0;
+        padding-left: 16px;
+        color: #000000;
+        font-size: 14px;
+        line-height: 22px;
+      }
+    }
+  }
+}

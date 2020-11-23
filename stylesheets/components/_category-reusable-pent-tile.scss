@@ -1,0 +1,190 @@
+@import '~/stylesheets/common/_shared.scss';
+
+.category-pent-tile-view {
+    display: flex;
+    flex-direction: column;
+    max-width: 375px;
+    font-family: 'TT Norms';
+    @include grid-media($blavity-grid-desktop-configuration) {
+
+    }
+
+
+h2 {
+    @include blavity-use-font-tt-norms-light();
+    margin: 24px 0 34px 70px;
+    font-size: 20px !important;
+    order: 1;
+    text-align: center;
+    width: 282px;
+    @include grid-media($blavity-grid-desktop-configuration) {
+        margin: 34px 0 34px 330px;
+        font-size: 32px !important; //having to use important here because the mix-in does not allow for further specification
+    }
+}
+
+.tile {
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.row-big{
+    order: 2;
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 57px;
+}
+
+.row-small{
+    order: 3;
+    display: flex;
+    flex-direction: row;
+}
+
+.tile-category{
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    line-height: 15px;
+    min-height: 18px;
+}
+
+.tile-tile {
+    font-weight: 400;
+    margin-bottom: 52px;
+    font-size: 16px;
+    line-height: 20px;
+    @include grid-media($blavity-grid-desktop-configuration) {
+        font-size: 14px;
+        line-height: 22px;
+    }
+}
+
+.big-card {
+    line-height: 28px;
+    margin-right: 35px;
+
+    a {
+        display: inline-block;
+        width: 444px;
+        text-decoration: none;
+        color: black;
+    }
+
+    .title .tile-card {
+        width: 444px;
+    }
+
+    img.img-fluid {
+        width: 444px;
+        height: 332px;
+        object-fit: cover;
+    }
+
+    .tile-category{
+        margin: 17px 0 10px 0;
+    }
+
+    .tile-title {
+        font-size: 20px;
+    }
+}
+
+.small-card {
+    font-size: 14px;
+    line-height: 20px;
+    margin-right: 40px;
+
+    a {
+        display: inline-block;
+        width: 281px;
+        text-decoration: none;
+        color: black;
+      }
+
+    .title .tile-card {
+        width: 281px;
+    }
+
+    img.img-fluid {
+        width: 281px;
+        height: 210px;
+        object-fit: cover;
+    }
+
+
+    .tile-category{
+        margin: 11px 0 10px 0;
+    }
+}
+
+.small-card-mobile {
+    height: 94px;
+    font-family: 'TT Norms';
+    font-size: 12px;
+    line-height: 22px;
+    display: flex;
+    justify-content: space-between;
+
+    a {
+        text-decoration: none;
+        color: black;
+      }
+
+    .tile-img {
+        width: 120px;
+
+    }
+
+    img.img-fluid {
+        width: 120px;
+        height: 90px;
+        object-fit: cover;
+        order: 1;
+    }
+
+    .desc {
+        order: 2;
+        width: 172px;
+        height: 94px;
+    }
+
+    .tile-category{
+        margin: 0 0 10px 0;
+    }
+
+}
+
+.title:after {
+    content:"";
+    display: inline-block;
+    height: 0.5em;
+    vertical-align: bottom;
+    width: 100%;
+    margin-right: -100%;
+    margin-left: 10px;
+    border-top: 1px solid black;
+}
+
+button {
+    order: 4;
+    outline: none;
+    margin: 44px 0 40px 62px;
+    height: 56px;
+    width: 289px;
+    border: 2px solid #EFEFEF;
+    background-color: #F7F6F8;
+    // box-shadow: 2px -4px 32px 0 rgba(0,0,0,0.2); // Spec doesn't show box shadow, but is included in the CSS
+    font-weight: 500;
+    font-family: 'TT Norms';
+    font-size: 16px;
+    line-height: 24px;
+    text-align: center;
+
+    @include grid-media($blavity-grid-desktop-configuration) {
+        width: 213px;
+        margin-left: 385px;
+        margin-top: 36px;
+    }
+}
+}

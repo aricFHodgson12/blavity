@@ -1,0 +1,300 @@
+@import '~/stylesheets/common/_shared.scss';
+
+.article-standard-header {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	font-family: "TT Norms";
+
+  .categories {
+    order: 1;
+    flex-wrap: nowrap;
+    text-align: center;
+    margin-bottom: 10px;
+
+    @include grid-media($blavity-grid-desktop-configuration) {
+      margin-bottom: 20px;
+    }
+  }
+
+  h4.post-tags {
+    display: inline-block;
+    text-transform: capitalize;
+    color: #FF542F;
+    margin: 0px;
+    font-size: 1rem;
+    font-weight: 500;
+    letter-spacing: 1px;
+    line-height: 15px;
+  }
+
+  .post-tags + .post-tags:before {
+    content: " / ";
+    color: black;
+  }
+
+  .article-title {
+    font-size: 24px;
+    font-weight: 400;
+    letter-spacing: -0.5px;
+    line-height: 32px;
+    order: 2;
+    text-align: center;
+    justify-content: space-around;
+    max-width: 334px;
+    margin: 0 auto 10px;
+
+    @include grid-media($blavity-grid-desktop-configuration) {
+      font-size: 40px;
+      font-weight: 400;
+      line-height: 48px;
+      max-width: 812px;
+      margin-bottom: 8px;
+    }
+  }
+
+  .article-subtitle {
+    order: 3;
+    max-width: 334px;
+    margin: 0 auto;
+    color: #685E6C;
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 350;
+    text-align: center;
+    justify-content: space-between;
+    margin-bottom: 10px;
+
+    @include grid-media($blavity-grid-desktop-configuration) {
+      font-size: 24px;
+      line-height: 32px;
+      max-width: 812px;
+    }
+
+    @include grid-media($blavity-grid-large-display-configuration) {
+      margin-bottom: 20px;
+    }
+  }
+
+  .article-imagery {
+    order: 4;
+    width: 100%;
+    height: 250px;
+
+    @include grid-media($blavity-grid-tablet-configuration) {
+      height: 400px;
+    }
+
+    @include grid-media($blavity-grid-desktop-configuration) {
+      height: 500px;
+    }
+
+    @include grid-media($blavity-grid-large-display-configuration) {
+      height: 600px;
+    }
+
+    .image-wrapper-4x3 {
+      position: relative;
+      height: 250px;
+			// padding-top: 65%;
+      width: 100%;
+
+      @include grid-media($blavity-grid-tablet-configuration) {
+        height: 400px;
+      //  padding-top: 45%;
+      }
+
+      @include grid-media($blavity-grid-desktop-configuration) {
+        height: 500px;
+        //padding-top: 35%;
+      }
+
+      @include grid-media($blavity-grid-large-display-configuration) {
+        height: 600px;
+      }
+
+      img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 250px;
+        width: 100%;
+        object-fit: contain;
+
+        @include grid-media($blavity-grid-tablet-configuration) {
+          height: 400px;
+        }
+        @include grid-media($blavity-grid-desktop-configuration) {
+          height: 500px;
+        }
+        @include grid-media($blavity-grid-large-display-configuration) {
+          height: 600px;
+        }
+      }
+    }
+
+
+    .article-image-details {
+      color: #685E6C;
+      font-size: 12px;
+      margin-bottom: 23px;
+      text-align: center;
+
+      @include grid-media($blavity-grid-desktop-configuration) {
+        text-align: left;
+      }
+
+      @include grid-media($blavity-grid-large-display-configuration) {
+        margin: 23px 25px 0 20px;
+      }
+    }
+
+    span.imgSrc {
+      color: #685E6C;
+      font-weight: 350;
+
+      @include grid-media($blavity-grid-desktop-configuration) {
+        color: #FF542F;
+        font-weight: 500;
+      }
+			@media screen and (min-width: 1441px){
+				margin-left: calc(((58.33vw) - 800px)/2);
+			}
+			@media screen and (min-width: 1921px){
+				margin-left: calc(((52.5vw) - 800px)/2);
+			}
+    }
+  }
+
+  span.photo-credit {
+    font-size: 12px;
+    color: #FF542F;
+    font-family: 'TT Norms';
+    font-weight: 500;
+    line-height: 20px;
+    margin-left: 35px;
+  }
+
+  .article-details {
+    border-bottom: 2px solid rgba(#35312E, .25);
+    order: 5;
+    display: flex;
+    height: calc((5rem) + .5vw);
+    flex-direction: row;
+    width: 100%;
+    justify-content: center;
+		padding-bottom: 3rem;
+
+    .meta-left {
+      font-size: 18px;
+      font-weight: 500;
+      margin-top: 13px;
+			flex-wrap: nowrap;
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			flex-direction: column;
+
+      @include grid-media($blavity-grid-desktop-configuration) {
+				flex-direction: row;
+        align-content: center;
+        margin-left: 1rem;
+				justify-content: space-between;
+      }
+    }
+
+    .meta-right {
+      display: flex;
+      justify-content: flex-end;
+      flex: 1;
+      margin-top: 13px;
+			align-items:center;
+    }
+
+    img.article-author {
+      width: 0px;
+      height: 0px;
+
+      @include grid-media($blavity-grid-desktop-configuration) {
+        border-radius: 50%;
+        height: 40px;
+        width: 40px;
+        object-fit: cover;
+        object-position: top;
+        box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.25);
+      }
+    }
+
+    .by {
+      visibility: hidden;
+
+      @include grid-media($blavity-grid-desktop-configuration) {
+        visibility: visible;
+        display: inline;
+      }
+    }
+
+    .desc,
+    .article-pub-date,
+    .article-pub-time {
+      padding-left: 2px;
+      display: inline;
+      font-weight: 400;
+      color: #685E6C;
+    }
+
+    .article-author-name,
+    .article-num {
+      padding-left: 2px;
+      display: inline;
+      font-weight: 450;
+    }
+  }
+
+  hr {
+    visibility: hidden;
+
+    @include grid-media($blavity-grid-desktop-configuration) {
+      visibility: visible;
+      width: 812px;
+      margin-left: 88px;
+      color: black;
+      margin: 10px 0;
+      align-content: center;
+    }
+  }
+	.button-slot {
+		order: 4;
+		a {
+			-moz-box-shadow: 3px 4px 0 0 #ffffff;
+			-webkit-box-shadow: 3px 4px 0 0 #ffffff;
+			box-shadow: 3px 4px 0 0 #ffffff;
+			background-color: transparent;
+			-moz-border-radius: 18px;
+			-webkit-border-radius: 18px;
+			border-radius: 18px;
+			border: 1px solid #a8a8a8;
+			display: inline-block;
+			cursor: pointer;
+			color: #000000;
+			font-family: Arial;
+			font-size: 17px;
+			font-weight: bold;
+			padding: 7px 25px;
+			text-decoration: none;
+      text-shadow: 0 1px 0 #000000;
+      margin-top: 25px;
+
+      @include grid-media($blavity-grid-tablet-configuration) {
+        margin-top: 35px;
+      }
+      @include grid-media($blavity-grid-desktop-configuration) {
+        margin: 25px 0;
+      }
+
+      @include grid-media($blavity-grid-large-display-configuration) {
+        margin: 50px 0 25px;
+      }
+		}
+	}
+}

@@ -1,0 +1,32 @@
+@import '~/stylesheets/common/_shared.scss';
+
+.article-social-left {
+  display: inline-flex;
+  flex-direction: row;
+
+  @include grid-media($blavity-grid-desktop-configuration) {
+    flex-direction: column;
+  }
+
+  .social-sharing-button-wrapper {
+    margin-bottom: 8px;
+    min-width: initial;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    .btn-social-sharing {
+      width: auto;
+
+      &:after {
+        content: '';
+        background-position: center;
+        display: block;
+        height: 48px;
+        width: 48px;
+        padding: 0;
+      }
+    }
+  }
+}

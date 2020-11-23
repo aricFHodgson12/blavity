@@ -1,0 +1,294 @@
+@import '~/stylesheets/common/_shared.scss';
+
+.footer {
+    font-family: "TT Norms";
+    max-width: 99vw;
+
+    .Cookie--blood-orange {
+      a {
+        color: #e76a68;
+        text-decoration: none;
+      }
+    }
+
+    &__footer-container{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        background-color: #35312E;
+
+        @include grid-media($blavity-grid-desktop-configuration) {
+
+        }
+        &__main {
+            order: 1;
+            display: flex;
+            flex-direction: column;
+
+            @include grid-media($blavity-grid-desktop-configuration) {
+                flex-direction: row;
+                justify-content: space-around;
+                align-self: center;
+                width: 95%;
+                max-width: 1440px;
+            }
+
+            &__social-callouts{
+                order: 1;
+                max-width: 100%;
+                margin: -15vh .5rem 0 2rem;
+                display: flex;
+                flex-direction: column;
+                align-self: flex-start;
+                @include grid-media($blavity-grid-desktop-configuration) {
+                    width: 50vw;
+                    align-self: center;
+
+                }
+                  @include grid-media($blavity-grid-tablet-configuration) {
+                    margin-top: 0;
+                  }
+
+                &__blavity{
+                    order: 1;
+                    display: flex;
+                    flex-direction: row;
+                    flex-wrap: nowrap;
+                    margin-bottom: 0;
+                    justify-content: space-between;
+                    max-width: 95%;
+
+                    @include grid-media($blavity-grid-desktop-configuration) {
+                        margin-bottom: 20px;
+                        align-self:flex-start;
+                        justify-content: space-around;
+                    }
+                    @include grid-media($blavity-grid-tablet-configuration) {
+                      justify-content: center;
+                    }
+
+                    &__logo{
+                        order: 1;
+                        background-image: url(https://storage.googleapis.com/blavitynews/assets/images/blavity-logo-white.svg);
+                        background-repeat: no-repeat;
+                        background-size: cover;
+                        width: 142px;
+                        height: 24px;
+
+
+                        @include grid-media($blavity-grid-desktop-configuration) {
+
+                        }
+
+                    }
+
+                    &__instagram{
+                        order: 2;
+                        background-image: url(https://storage.googleapis.com/blavitynews/assets/images/social-share/ig-white-icon.svg);
+                        background-repeat: no-repeat;
+                        width: 35px;
+                        height: 24px;
+
+
+                        @include grid-media($blavity-grid-desktop-configuration) {
+
+                        }
+                        @include grid-media($blavity-grid-tablet-configuration) {
+                          margin-left: 2.5rem;
+                        }
+                    }
+
+                    &__twitter{
+                        order: 3;
+                        background-image: url(https://storage.googleapis.com/blavitynews/assets/images/social-share/tw-white-icon.svg);
+                        background-repeat: no-repeat;
+                        width: 40px;
+                        height: 24px;
+
+                        @include grid-media($blavity-grid-desktop-configuration) {
+                            width: 28px;
+
+                        }
+                        @include grid-media($blavity-grid-tablet-configuration) {
+                          margin-left: 2.5rem;
+                        }
+                    }
+
+                    &__facebook{
+                        order: 4;
+                        background-image: url(https://storage.googleapis.com/blavitynews/assets/images/social-share/fb-white-icon.svg);
+                        background-repeat: no-repeat;
+                        width: 35px;
+                        height: 24px;
+
+                        @include grid-media($blavity-grid-desktop-configuration) {
+                            width: 24px;
+                            margin-right: 40px;
+                        }
+                        @include grid-media($blavity-grid-tablet-configuration) {
+                          margin-left: 2.5rem;
+                        }
+                    }
+                }
+
+                &__paragraph{
+                    visibility: hidden;
+
+                    @include grid-media($blavity-grid-desktop-configuration) {
+                        order: 2;
+                        visibility: visible;
+                        height: 102px;
+                        width: 595px;
+                        opacity: 0.5;
+                        color: #FFFFFF;
+                        font-size: 16px;
+                        font-weight: 200;
+                        line-height: 24px;
+                        letter-spacing: 1px;
+
+                        span {
+                            font-weight: bold;
+                        }
+                    }
+                }
+
+                &__line {
+                    order: 2;
+                    visibility: visible;
+                    border-bottom: 3px solid #F9F9F9;
+                    width: 92%;
+                    opacity: 0.25;
+                    margin-top: 24px;
+
+                    @include grid-media($blavity-grid-desktop-configuration) {
+                        visibility: hidden;
+                    }
+                }
+            }
+
+        &__menu-items{
+            order: 2;
+            font-size: 20px;
+            font-weight: 400;
+            letter-spacing: 1px;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: nowrap;
+            margin-top: 24px;
+            margin-left: 0;
+            align-self: center;
+            max-width: 90%;
+
+
+            @include grid-media($blavity-grid-desktop-configuration) {
+                margin-top: 84px;
+                margin-left: 7%;
+
+            }
+
+            a {
+                color: white;
+                text-decoration: none;
+            }
+
+            ul {
+                list-style-type: none;
+            }
+
+            li {
+                padding-bottom: 1.5rem;
+                flex-wrap: nowrap;
+                max-width: 200px;
+            }
+
+            &__col {
+                display: flex;
+                flex-direction: column;
+                padding: 0;
+                width: 45%;
+
+                @include grid-media($blavity-grid-desktop-configuration) {
+                    padding: 0 1rem;
+                    &__item {
+                      display: flex;
+                      flex-direction: row;
+                      justify-content: flex-start;
+                    }
+                }
+            }
+        }
+    }
+
+
+        &__line {
+            order: 2;
+            border-bottom: 3px solid #F9F9F9;
+            width: 100%;
+            opacity: 0.25;
+            margin-bottom: 29px;
+
+            @include grid-media($blavity-grid-desktop-configuration) {
+                border-bottom: 2px solid #F9F9F9;
+            }
+        }
+
+        &__meta {
+            order: 3;
+            color: #FFFFFF;
+            display: flex;
+            align-self: center;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 35px;
+            width: 100%;
+
+
+
+            @include grid-media($blavity-grid-desktop-configuration) {
+                align-self: center;
+                justify-content: center;
+
+
+            }
+
+            &__info{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                @include grid-media($blavity-grid-desktop-configuration) {
+                  max-width: 1440px;
+                  width: 95%;
+
+
+                }
+
+
+                p {
+                    opacity: 0.5;
+                }
+
+                a {
+                    outline: none;
+                }
+
+                button {
+                     background-color: black;
+                     border-radius: 5px;
+                     border: 2px solid white;
+                     height: 50px;
+                     width: 165px;
+                     font-weight: 600;
+                     margin-left: 20px;
+                     cursor: pointer;
+                }
+
+                button:hover {
+                    color: grey;
+                }
+
+            }
+
+        }
+
+    }
+}

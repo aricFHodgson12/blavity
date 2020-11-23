@@ -1,0 +1,37 @@
+@font-face {
+  font-family: 'TT Norms';
+  src: url('TTNorms-Regular.woff2') format('woff2'),
+  url('TTNorms-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'TT Norms';
+  src: url('TTNorms-Light.woff2') format('woff2'),
+  url('TTNorms-Light.woff') format('woff');
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'TT Norms';
+  src: url('TTNorms-Medium.otf') format('opentype');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'TT Norms';
+  src: url('TTNorms-Bold.otf') format('opentype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'MillerDisplay';
+  src: url('MillerDisplay-SemiboldItalic.woff2') format('woff2'),
+  url('MillerDisplay-SemiboldItalic.woff') format('woff');
+  font-weight: 600;
+  font-style: italic;
+}

@@ -1,0 +1,276 @@
+@import "node_modules/bootstrap/scss/bootstrap";
+@import '~/stylesheets/common/_shared.scss';
+
+.author-page {
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-family: "TT Norms";
+    align-items: center;
+
+    @include grid-media($blavity-grid-desktop-configuration) {
+      justify-items: center;
+      margin-bottom: 2rem;
+      max-width: 100vw;
+    }
+
+    &__author{
+        display: flex;
+        flex-direction: column;
+        margin: 2.5rem 1.75rem 1.25rem 1rem;
+
+        @include grid-media($blavity-grid-desktop-configuration) {
+          max-width: 100vw;
+          flex-direction: row;
+          margin-top: 5rem;
+          margin-left: 5.47rem;
+          margin-bottom: 4.88rem;
+          order: 1;
+        }
+        @include grid-media($blavity-grid-default-configuration) {
+          max-width: 98vw;
+          margin-left: 2vw;
+          width: 17rem;
+          justify-content: center;
+          align-items: center;
+        }
+
+
+        &__avatar {
+            order: 1;
+            border-radius: 50%;
+            height: 7.56rem;
+            min-width: 7.56rem;
+            object-fit: cover;
+            box-shadow: 0 2px 8px 0 rgba(0,0,0,0.25);
+            border: 1px solid #979797;
+            margin-right: 7px;
+            background-repeat: no-repeat;
+            background-size: cover;
+
+
+            @include grid-media($blavity-grid-desktop-configuration) {
+              height: 17.56rem;
+              min-width: 17.56rem;
+            }
+
+        }
+
+        &__details {
+            order: 2;
+            display: flex;
+            flex-direction: column;
+            margin-left: 1.5rem;
+            @include grid-media($blavity-grid-desktop-configuration) {
+              margin-left: 2.5rem;
+            }
+
+            &__name {
+                order: 1;
+                display: block;
+                height: 3rem;
+                color: #35312E;
+                font-size: 1.25rem;
+                line-height: 3rem;
+                text-shadow: 2px 4px 12px 0 rgba(0,0,0,0.5);
+
+                @include grid-media($blavity-grid-desktop-configuration) {
+                  display: inline-block;
+                  height: 3rem;
+                  font-size: 2.5rem;
+                }
+            }
+
+            &__status-mobile {
+              order: 2;
+              width: 6rem;
+              height: 2rem;
+              background-size: contain;
+              background-repeat: no-repeat;
+              position: absolute;
+              margin-left: .2rem;
+              margin-top: 3.25rem;
+            }
+
+            &__start {
+                order: 2;
+                height: 2rem;
+                width: 13.75rem;
+                color: #685E6C;
+                font-size: 1rem;
+                font-weight: 500;
+                line-height: 2rem;
+                margin-top: .5rem;
+                margin-bottom: .69rem;
+            }
+
+            &__bio {
+                order: 2;
+                width: 20.88rem;
+                color: #685E6C;
+                font-size: 1rem;
+                line-height: 2rem;
+                margin-bottom: 1rem;
+                @include grid-media($blavity-grid-default-configuration) {
+                  max-width: 98vw;
+                  margin-left: 2vw;
+                  width: 17rem;
+                  justify-content: center;
+                  align-items: center;
+                }
+
+
+                @include grid-media($blavity-grid-desktop-configuration) {
+                  order: 3;
+                  width:100%;
+                  max-width: 52.31rem;
+                  font-size: 1.25rem;
+                }
+
+            }
+
+            &__social {
+                order: 3;
+                height: 32px;
+                width: 325px;
+                color: #685E6C;
+                font-size: 1rem;
+                font-weight: 500;
+                line-height: 2rem;
+                display: inline-flex;
+                align-items: center;
+
+                .follow {
+                  margin-bottom: 10px;
+                }
+                @include grid-media($blavity-grid-default-configuration) {
+                  max-width: 98vw;
+                  margin-left: 2vw;
+                  width: 17rem;
+                  justify-content: center;
+                  align-items: center;
+                }
+
+                @include grid-media($blavity-grid-desktop-configuration) {
+                  order: 4;
+                  width: 283px;
+                }
+
+                a {
+                  display: inline-flex;
+                }
+            }
+        }
+}
+    .mobile-row-1 {
+      display: flex;
+      flex-direction: row;
+      margin-bottom: 1.25rem;
+    }
+
+    hr {
+      @include grid-media($blavity-grid-mobile-configuration) {
+        order: 2;
+      }
+      @include grid-media($blavity-grid-desktop-configuration) {
+        order: 1;
+      }
+
+    }
+
+    .sponsored-content {
+      order: 6;
+      margin: 0 .5rem;
+    }
+
+    .author-row {
+        order: 5;
+        display: flex;
+        flex-direction: row;
+        align-content: center;
+        margin: 0 .5rem;
+        @include grid-media($blavity-grid-desktop-configuration) {
+          order: 1;
+          margin: 0 5rem;
+        }
+
+    }
+
+    .mini-subscribe-box {
+        margin-top: 1.5rem;
+        width: 300px;
+    }
+    .advertisement-column {
+      display: none;
+        @include grid-media($blavity-grid-desktop-configuration) {
+            display: block;
+            order: 2;
+            margin-top: 2rem;
+            flex-direction: column;
+            position: relative;
+            min-height: 81.25rem;
+        }
+
+      .advertisement-content {
+        position: sticky;
+        position: -webkit-sticky;
+        top: 2rem;
+      }
+
+        &:before {
+          @include blavity-use-font-tt-norms-light;
+
+          content: 'advertisement';
+          display: flex;
+          font-size: 12px;
+          line-height: 16px;
+          margin-bottom: 8px;
+          text-transform: capitalize;
+          color: gray;
+          padding-left: 40%;
+        }
+
+      .ad-two {
+
+        @include grid-media($blavity-grid-desktop-configuration) {
+          display: flex;
+          width: 50px;
+        }
+      }
+    }
+
+      .ad-one {
+        display: none;
+
+        @include grid-media($blavity-grid-desktop-configuration) {
+          margin-left: 100px;
+
+        &:before {
+            @include blavity-use-font-tt-norms-light;
+
+            content: 'advertisement';
+            display: block;
+            font-size: 12px;
+            line-height: 16px;
+            margin-bottom: 8px;
+            text-transform: capitalize;
+            color: gray;
+            text-align: center;
+            margin-top: 20px;
+          }
+
+        }
+      }
+
+  #author-line {
+    height: 2.5px;
+    width: 98vw;
+    opacity: 0.25;
+    background-color: #35312E;
+    order: 1;
+    @media (max-width: 360px) {
+      order: 2;
+    }
+  }
+}

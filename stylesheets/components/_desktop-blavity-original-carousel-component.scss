@@ -1,0 +1,144 @@
+@import '~/stylesheets/common/_shared.scss';
+
+.carousel-desk-view {
+  padding: 15px;
+  padding-bottom: 55px;
+  background-color: #ff542f;
+  width: 100%;
+  font-family: "TT Norms";
+  &__caraousal-header {
+    @include grid-column(12);
+    display: flex;
+    justify-content: center;
+    padding: 20px 0 35px;
+    &__logo {
+      width: 211px;
+      height: 16px;
+      &_span {
+        font-weight: 300;
+      }
+    }
+  }
+
+  &__caraousal-wrapper {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    position: relative;
+    @include grid-container;
+    &_caraousal-wrapper-prev {
+      margin: auto;
+      width: 4%;
+      &_slick-prev {
+        background: transparent;
+        border: none;
+        box-shadow: unset;
+        outline: unset;
+        cursor: pointer;
+        &:focus {
+          outline: unset;
+        }
+        img {
+          width: 100%;
+          height: auto;
+        }
+      }
+    }
+
+    &_caraousal-wrapper-next {
+      width: 4%;
+      margin: auto;
+      &_slick-next {
+        background: transparent;
+        border: none;
+        box-shadow: unset;
+        outline: unset;
+        cursor: pointer;
+        &:focus {
+          outline: unset;
+        }
+        img {
+          width: 100%;
+          height: auto;
+        }
+      }
+    }
+
+    &_caraousal-wrapper-area {
+      width: 92%;
+    }
+  }
+
+  &__middle-data {
+    text-align: center;
+    padding: 0 15px;
+    margin: 0;
+    &__snap-3 {
+      @include grid-column(4);
+      text-align: center;
+      height: 512px;
+      margin: 0 auto;
+      max-width: 100%;
+      width: 27rem !important;
+      position: relative;
+      float: none;
+      &_img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      &__news {
+        padding: 40px 40px 40px;
+        text-align: left;
+        color: white;
+        background: linear-gradient(rgba(255, 255, 255, 0), rgba(0, 0, 0, 0.8), black, black, black);
+        position: absolute;
+        bottom: 0;
+        height: 280px;
+        @include blavity-use-font-tt-norms-regular;
+        &_img {
+          display: none;
+          // width: 48px;
+          // height: 48px;
+          // margin-bottom: 0px;
+          // img {
+            // border-radius: 2px;
+          // }
+        }
+        &_p {
+          display: -webkit-box;
+          -webkit-box-orient: vertical;
+          -webkit-line-clamp: 4;
+          overflow: hidden;
+          line-height: 1.2;
+          text-overflow: ellipsis;
+          height: 125px;
+          margin-top: 2px;
+          margin-bottom: 25px;
+          font-weight: 300;
+          font-family: "TT Norms";
+          font-size: 28px;
+          line-height: 32px;
+          letter-spacing: 1px;
+          a {
+            color: #fff;
+            text-decoration: none;
+          }
+        }
+        &_label {
+          font-size: 18px;
+          letter-spacing: .5px;
+          font-weight: 300;
+          @include blavity-use-font-tt-norms-regular;
+          a {
+            color: #E1DCE3;
+            text-decoration: none;
+          }
+        }
+      }
+    }
+  }
+}

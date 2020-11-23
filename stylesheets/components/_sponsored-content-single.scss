@@ -1,0 +1,104 @@
+@import '~/stylesheets/common/_shared.scss';
+
+    .sponsored-content {
+        display: flex;
+        flex-direction: column;
+        padding: 0 0 52px;
+  
+        @include grid-media($blavity-grid-desktop-configuration) {
+          flex-direction: row;
+        }
+  
+        .thumb-container {
+          align-content: flex-start;
+          flex: 0 0 281px;
+
+          .image-wrapper-4x3 {
+            position: relative;
+            height: 250px;
+            width: 100%;
+      
+            @include grid-media($blavity-grid-tablet-configuration) {
+              height: 400px;
+            }
+      
+            @include grid-media($blavity-grid-desktop-configuration) {
+              height: 281px;
+            }
+      
+            @include grid-media($blavity-grid-large-display-configuration) {
+              height: 281px;
+            }
+      
+            img {
+              position: absolute;
+              height: 250px;
+              width: 100%;
+              object-fit: contain;
+      
+              @include grid-media($blavity-grid-tablet-configuration) {
+                height: 400px;
+              }
+              @include grid-media($blavity-grid-desktop-configuration) {
+                height: 281px;
+              }
+              @include grid-media($blavity-grid-large-display-configuration) {
+                height: 281px;
+              }
+            }
+          }
+        }
+  
+        .content {
+          @include grid-media($blavity-grid-desktop-configuration) {
+            margin-left: 39px;
+            padding-top: 30px;
+          }
+        }
+  
+        .card-title {
+          @include blavity-use-font-tt-norms-light;
+  
+          color: #FF542F;
+          font-size: 12px;
+          letter-spacing: 1px;
+          line-height: 15px;
+          margin-bottom: 6px;
+          text-transform: capitalize;
+
+          @include grid-media($blavity-grid-tablet-configuration) {
+            margin-top: 6px;
+          }
+
+        }
+  
+        .sponsored-content-title {
+          @include blavity-use-font-tt-norms-regular;
+  
+          font-size: 20px;
+          line-height: 32px;
+          margin-bottom: 24px;
+        }
+  
+        .learn-more-link {
+          @include blavity-use-font-tt-norms-regular;
+  
+          color: #35312E;
+          display: flex;
+          align-items: center;
+          font-size: 16px;
+          line-height: 24px;
+          text-decoration: none;
+  
+          &:after {
+            content: '';
+            background-image: url(data:image/svg+xml;base64,PHN2ZyBoZWlnaHQ9JzMwMHB4JyB3aWR0aD0nMzAwcHgnICBmaWxsPSIjMDAwMDAwIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB2aWV3Qm94PSIwIDAgMjQgMjQiIHZlcnNpb249IjEuMSIgeD0iMHB4IiB5PSIwcHgiPjx0aXRsZT5pY29uL25ldy13aW5kb3ctc29saWQ8L3RpdGxlPjxkZXNjPkNyZWF0ZWQgd2l0aCBTa2V0Y2guPC9kZXNjPjxnIHN0cm9rZT0ibm9uZSIgc3Ryb2tlLXdpZHRoPSIxIiBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxwYXRoIGQ9Ik0yMSwzLjAwNDkgTDIxLDEwLjAwNDkgTDE4LjIwNyw3LjIxMTkgTDEwLDE1LjQxODkgTDguNTg2LDE0LjAwNDkgTDE2Ljc5Myw1Ljc5NzkgTDE0LDMuMDA0OSBMMjEsMy4wMDQ5IFogTTE4LDIwLjAwNDkgTDQsMjAuMDA0OSBMNCw2LjAwNDkgTDEyLDYuMDA0OSBMMTIsOC4wMDQ5IEw2LDguMDA0OSBMNiwxOC4wMDQ5IEwxNiwxOC4wMDQ5IEwxNiwxMi4wMDQ5IEwxOCwxMi4wMDQ5IEwxOCwyMC4wMDQ5IFoiIGZpbGw9IiMwMDAwMDAiPjwvcGF0aD48L2c+PC9zdmc+);
+            background-position: center;
+            background-size: contain;
+            display: block;
+            height: 1em;
+            width: 1em;
+            margin-left: 8px;
+          }
+        }
+      }

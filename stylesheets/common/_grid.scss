@@ -1,0 +1,16 @@
+@import '~/stylesheets/common/_shared.scss';
+
+.grid-container {
+  @include grid-container();
+}
+
+.grid-row {
+  @include grid-container();
+
+  display: flex;
+  flex-wrap: wrap;
+
+  @include grid-media($blavity-grid-default-configuration, $blavity-grid-mobile-configuration, $blavity-grid-tablet-configuration, $blavity-grid-desktop-configuration, $blavity-grid-large-display-configuration) {
+    @include grid-collapse();
+  }
+}

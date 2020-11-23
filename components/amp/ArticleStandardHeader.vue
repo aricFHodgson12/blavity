@@ -1,0 +1,95 @@
+<template>
+  <div class="article-standard-header">
+    <div class="categories">
+      <h4
+        class="article-category post-tags"
+      >
+        {{ post.categories[0].name }}
+      </h4>
+    </div>
+    <h1
+      class="article-title"
+    >
+      {{ title }}
+    </h1>
+    <h2
+      class="article-subtitle"
+    >
+      {{ subtitle }}
+    </h2>
+    <div class="article-imagery">
+      <div class="image-wrapper-4x3">
+        <amp-img
+          :src="image"
+          class="article-image contain"
+          layout="fill"
+        ></amp-img>
+      </div>
+    </div>
+    <ArticleDetails
+      :post="post"
+      :views="views"
+      :caption="caption"
+    >
+    </ArticleDetails>
+  </div>
+</template>
+
+<script>
+import he from 'he'
+import ArticleDetails from '~/components/amp/ArticleDetails'
+
+export default {
+  name: 'amp-article-standard',
+  components: {
+    ArticleDetails
+  },
+  props: {
+    post: {
+      type: Object,
+      required: true
+    },
+    caption: {
+      type: String,
+      required: true
+    },
+    views: {
+      type: String,
+      required: true
+    }
+  },
+
+  computed: {
+    title () {
+      return he.decode(this.post.title)
+    },
+    subtitle () {
+      if (this.post.subTitle) {
+        return he.decode(this.post.subTitle)
+      } else {
+        return ' '
+      }
+    },
+    image () {
+      if (this.post.wp_featuredImage.includes('//blavity.com/')) {
+        return this.post.wp_featuredImage.replace('blavity.com', 'legacy.blavity.com')
+      } else if (this.post.wp_featuredImage.includes('res.cloudinary.com')) {
+        return this.post.wp_featuredImage
+      } else if (this.post.wp_featuredImage.includes('http')) {
+        return this.post.wp_featuredImage
+      } else {
+        if (this.isViewportMobile) {
+          return `https://res.cloudinary.com/blavity/image/upload/c_fit,g_center,h_250,q_auto:best,g_south_east,x_0/${this.post.wp_featuredImage}`
+        }
+        return `https://res.cloudinary.com/blavity/image/upload/c_fill,g_center,w_800,h_500,q_auto:best,g_south_east,x_0/${this.post.wp_featuredImage}`
+      }
+    }
+  }
+
+  // TODO: Is the date supposed to only say Today and never yesterday? If so, write functionality to determine if it is today and print date if it is not
+}
+</script>
+
+<style lang="scss">
+@import '~/stylesheets/amp/components/_article-standard-header.scss';
+</style>

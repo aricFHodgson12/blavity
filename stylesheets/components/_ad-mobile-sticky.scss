@@ -1,0 +1,26 @@
+.ad-mobile-sticky {
+    z-index: 1001;
+    width: 100%;
+    height: 70px;
+    background-color: #35312e;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+
+    .slot {
+      margin-top: 10px;
+    }
+
+    .close {
+        position: absolute;
+        top: 0;
+        right: 0;
+        color: #fff;
+        font-family: 'TT Norms';
+        font-weight: 500;
+        font-size: 10px;
+        text-decoration: none;
+        display: block;
+        padding: 5px;
+    }
+}

@@ -1,0 +1,143 @@
+@import '~/stylesheets/common/_shared.scss';
+
+.nav-subscribe-box {
+  background-color: #35312e;
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  padding-top: 1rem;
+  clip-path: polygon(0 10%, 78% 10%, 81% 0, 84% 10%, 100% 10%, 100% 100%, 0 100%);
+  @include grid-media($blavity-grid-desktop-configuration) {
+    height: 10.875rem;
+    width: 16.625rem;
+    clip-path: polygon(0 10%, 68% 10%, 71% 0, 74% 10%, 100% 10%, 100% 100%, 0 100%);
+  }
+
+  &__capture-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 8rem;
+    padding: 1.5rem;
+
+    &__email {
+      display: flex;
+      border-bottom: 2px solid #fff;
+      border-color: #fff;
+      padding-bottom: 0.5rem;
+      border-top: 0;
+      border-left: 0;
+      border-right: 0;
+      margin-bottom: 1rem;
+
+      &__input {
+        @include blavity-use-font-tt-norms-regular();
+        background: transparent;
+        color: #999999;
+        flex: 90;
+        border: none;
+
+        &:active,
+        &:focus {
+          border: none;
+          outline: none;
+
+        }
+      }
+
+      &__submit {
+        display: inline-flex;
+        flex: 1;
+        justify-content: flex-end;
+        background: transparent;
+        border: none;
+        cursor: pointer;
+
+        &:focus {
+          outline: none;
+        }
+      }
+    }
+
+    &__terms {
+      display: flex;
+      flex-direction: row;
+
+      &__checkbox-label {
+        width: 12px;
+        height: 12px;
+        box-shadow: 2px 4px 16px rgba(0, 0, 0, 0.1);
+        border: 1px solid #979797;
+        background-color: #ffffff;
+
+        &__text {
+          @include blavity-use-font-tt-norms-light();
+          font-size: 0.75rem;
+          -webkit-user-select: none;
+          -moz-user-select: none;
+          -khtml-user-select: none;
+          -ms-user-select: none;
+          font-weight: 200;
+
+          a {
+            text-decoration: underline;
+            color: #ffffff;
+            font-weight: 500;
+          }
+        }
+      }
+
+      &__input {
+        padding-top: 3px;
+      }
+
+      &__check-label {
+        padding-left: 10px;
+      }
+    }
+
+    &__error-text {
+      display: flex;
+      justify-content: center;
+      text-shadow: -0.2px 0.1px red;
+      font-size: 0.75rem;
+      color: #F37676;
+      font-family: "TT Norms";
+      font-style: normal;
+      font-weight: 500;
+      float: left;
+      padding-top: 14px;
+    }
+  }
+
+  &__success-message {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 8rem;
+    width: 15rem;
+    position: relative;
+
+    .mobile-menu__header__toggler.active {
+      align-self: flex-start;
+      position: absolute;
+      top: -1rem;
+      right: -.25rem;
+
+      span {
+        width: 1rem;
+      }
+    }
+
+    &__heading {
+      order: -1;
+      @include blavity-use-font-tt-norms-regular();
+      font-size: 1rem;
+      color: #fff;
+      margin-bottom: 1rem;
+    }
+  }
+}

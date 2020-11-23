@@ -1,0 +1,208 @@
+* {
+  box-sizing: border-box;
+}
+@import 'normalize.css/normalize.css';
+@import '~/stylesheets/common/_root.scss';
+@import '~/stylesheets/common/_grid.scss'; // @import '~/stylesheets/common/_typography.scss';
+body {
+  position: relative;
+}
+
+.header-wrapper {
+  height: 64px;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+}
+
+img {
+  cursor: pointer !important;
+}
+
+:focus {
+  outline: none;
+}
+
+:active {
+  outline: none;
+}
+
+#interactApp5c8acb5d0159270014984646,
+#interactApp5c8afae22430eb0014e5896f,
+#interactApp5c940c6f5fbe2500140ae8c2,
+#interactApp5ca62aec788d0100149f6659,
+#interactApp5ca66dc8788d0100149f67d1,
+#interactApp5ca69018cc66f20014ced9b9,
+#interactApp5ca6e4a767ba5000146cedfa,
+#interactApp5cae824e92b96100146b623c,
+#interactApp5cc23afe539d8f001457d8ff,
+#interactApp5cc23afe539d8f001457d8ff,
+#interactApp5ccfb00bf96c2e0014021f54,
+#interactApp5ccfc44a93870d0014aea9f8,
+#interactApp5cdada8be214640014afaf76,
+#interactApp5cdc173942a52c00143da5ed,
+#interactApp5cdc173942a52c00143da5ed,
+#interactApp5cdf3de509333a001430f022,
+#interactApp5cdf3de509333a001430f022,
+#interactApp5d13c12295b1760014c7aeae,
+#interactApp5d263e81bc85a60014264e14,
+#interactApp5d263e81bc85a60014264e14,
+#interactApp5d28ab82d177070014aa50c7,
+#interactApp5d28dd90217bd800148c83a5,
+#interactApp5d28dd90217bd800148c83a5,
+#interactApp5d29070446f38200140b069f,
+#interactApp5d2f54b1f5334a00148b9175,
+#interactApp5d2f54b1f5334a00148b9175,
+#interactApp5d2f6e0b04ef5b001454c698,
+#interactApp5d31f98cf47a380014a17dab,
+#interactApp5d3607ab09d8960014fa992b,
+#interactApp5d3a0f73e1773000147866f5,
+#interactApp5d3f054d49f4e20014b609ee,
+#interactApp5d3f054d49f4e20014b609ee,
+#interactApp5d67ecc1ae086a0014bf4652,
+#interactApp5c881ba136473f0014613abb {
+  min-height: 700px;
+  max-height: 800px;
+}
+@media (max-width: 1440px) {
+  #interactApp5c8acb5d0159270014984646,
+  #interactApp5c8afae22430eb0014e5896f,
+  #interactApp5c940c6f5fbe2500140ae8c2,
+  #interactApp5ca62aec788d0100149f6659,
+  #interactApp5ca66dc8788d0100149f67d1,
+  #interactApp5ca69018cc66f20014ced9b9,
+  #interactApp5ca6e4a767ba5000146cedfa,
+  #interactApp5cae824e92b96100146b623c,
+  #interactApp5cc23afe539d8f001457d8ff,
+  #interactApp5cc23afe539d8f001457d8ff,
+  #interactApp5ccfb00bf96c2e0014021f54,
+  #interactApp5ccfc44a93870d0014aea9f8,
+  #interactApp5cdada8be214640014afaf76,
+  #interactApp5cdc173942a52c00143da5ed,
+  #interactApp5cdc173942a52c00143da5ed,
+  #interactApp5cdf3de509333a001430f022,
+  #interactApp5cdf3de509333a001430f022,
+  #interactApp5d13c12295b1760014c7aeae,
+  #interactApp5d263e81bc85a60014264e14,
+  #interactApp5d263e81bc85a60014264e14,
+  #interactApp5d28ab82d177070014aa50c7,
+  #interactApp5d28dd90217bd800148c83a5,
+  #interactApp5d28dd90217bd800148c83a5,
+  #interactApp5d29070446f38200140b069f,
+  #interactApp5d2f54b1f5334a00148b9175,
+  #interactApp5d2f54b1f5334a00148b9175,
+  #interactApp5d2f6e0b04ef5b001454c698,
+  #interactApp5d31f98cf47a380014a17dab,
+  #interactApp5d3607ab09d8960014fa992b,
+  #interactApp5d3a0f73e1773000147866f5,
+  #interactApp5d3f054d49f4e20014b609ee,
+  #interactApp5d3f054d49f4e20014b609ee,
+  #interactApp5d67ecc1ae086a0014bf4652,
+  #interactApp5c881ba136473f0014613abb {
+    min-height: 575px;
+    max-height: 800px;
+  }
+}
+@media (max-width: 767px) {
+  #interactApp5c8acb5d0159270014984646,
+  #interactApp5c8afae22430eb0014e5896f,
+  #interactApp5c940c6f5fbe2500140ae8c2,
+  #interactApp5ca62aec788d0100149f6659,
+  #interactApp5ca66dc8788d0100149f67d1,
+  #interactApp5ca69018cc66f20014ced9b9,
+  #interactApp5ca6e4a767ba5000146cedfa,
+  #interactApp5cae824e92b96100146b623c,
+  #interactApp5cc23afe539d8f001457d8ff,
+  #interactApp5cc23afe539d8f001457d8ff,
+  #interactApp5ccfb00bf96c2e0014021f54,
+  #interactApp5ccfc44a93870d0014aea9f8,
+  #interactApp5cdada8be214640014afaf76,
+  #interactApp5cdc173942a52c00143da5ed,
+  #interactApp5cdc173942a52c00143da5ed,
+  #interactApp5cdf3de509333a001430f022,
+  #interactApp5cdf3de509333a001430f022,
+  #interactApp5d13c12295b1760014c7aeae,
+  #interactApp5d263e81bc85a60014264e14,
+  #interactApp5d263e81bc85a60014264e14,
+  #interactApp5d28ab82d177070014aa50c7,
+  #interactApp5d28dd90217bd800148c83a5,
+  #interactApp5d28dd90217bd800148c83a5,
+  #interactApp5d29070446f38200140b069f,
+  #interactApp5d2f54b1f5334a00148b9175,
+  #interactApp5d2f54b1f5334a00148b9175,
+  #interactApp5d2f6e0b04ef5b001454c698,
+  #interactApp5d31f98cf47a380014a17dab,
+  #interactApp5d3607ab09d8960014fa992b,
+  #interactApp5d3a0f73e1773000147866f5,
+  #interactApp5d3f054d49f4e20014b609ee,
+  #interactApp5d3f054d49f4e20014b609ee,
+  #interactApp5d67ecc1ae086a0014bf4652,
+  #interactApp5c881ba136473f0014613abb {
+    min-height: 375px;
+    max-height: 575px;
+  }
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+}
+
+.transition-container {
+  transition: all 0.5s cubic-bezier(.55,0,.1,1);
+}
+
+.page-enter-active,
+.page-leave-active {
+  transition: opacity 0.5s;
+}
+
+.page-enter,
+.page-leave-active {
+  opacity: 0;
+}
+
+.bounce-enter-active {
+  animation: bounce-in 0.8s;
+}
+
+.bounce-leave-active {
+  animation: bounce-out 0.5s;
+}
+@keyframes bounce-in {
+  0% {
+    transform: scale(0);
+  }
+
+  50% {
+    transform: scale(1.5);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+@keyframes bounce-out {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.5);
+  }
+
+  100% {
+    transform: scale(0);
+  }
+}
+
+.slide-left-enter,
+.slide-right-leave-active {
+  opacity: 0;
+  transform: translate(30px, 0);
+}
+
+.slide-left-leave-active,
+.slide-right-enter {
+  opacity: 0;
+  transform: translate(-30px, 0);
+}

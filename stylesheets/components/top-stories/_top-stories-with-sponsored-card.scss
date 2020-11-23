@@ -1,0 +1,49 @@
+@import '~/stylesheets/common/_shared.scss';
+
+.item {
+    display: flex;
+    max-height: 10rem;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #979797;
+    &:last-of-type {
+      border-bottom: 2px solid #35312E;
+    }
+
+    .top-stories-with-sponsored & {
+      align-items: flex-start;
+    }
+
+    .featured {
+      max-width: 45%;
+      height: 100%;
+      .article-image {
+        max-width: 100%;
+        object-fit: cover;
+      }
+    }
+
+    .content {
+      max-width: 50%;
+      cursor: pointer;
+      .headline {
+        font-size: .75rem;
+        color: #FF542F;
+        margin-top: 0;
+        margin-bottom: 15px;
+        @include blavity-use-font-tt-norms-light();
+      }
+      a {
+        text-decoration: none;
+      }
+      .text {
+        margin: 0;
+        font-size: .875rem;
+        color: #000;
+        line-height: 1.2;
+        @include blavity-use-font-tt-norms-regular();
+      }
+    }
+  }

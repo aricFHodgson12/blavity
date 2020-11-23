@@ -1,0 +1,120 @@
+@import '~/stylesheets/common/_shared.scss';
+
+.related-stories {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: 'TT Norms';
+
+  @include grid-media($blavity-grid-desktop-configuration) {
+    align-items: stretch;
+    margin-bottom: 40px;
+  }
+
+  h3 {
+    @include blavity-use-font-tt-norms-regular();
+
+    border-bottom: 2px solid #35312E;
+    color: #000;
+    font-size: 1rem;
+    line-height: 40px;
+    padding-bottom: 15px;
+    display: flex;
+    align-items: center;
+
+    @include grid-media($blavity-grid-desktop-configuration) {
+      justify-content: flex-start;
+      font-size: 1.5rem;
+      line-height: 40px;
+      padding-bottom: 8px;
+      margin-bottom: 24px;
+    }
+    span {
+      display: flex;
+    }
+  }
+
+  .item {
+    display: flex;
+    margin-bottom: 24px;
+    padding-bottom: 16px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    .featured {
+      flex: 0 0 120px;
+      margin-right: 12px;
+
+      .image-wrapper-4x3 {
+        max-width: 175px;
+        height: auto;
+
+        @include grid-media($blavity-grid-desktop-configuration) {
+          max-width: 190px;
+          width: 190px;
+          height: 106px;
+        }
+
+        @include grid-media($blavity-grid-large-display-configuration) {
+          max-width: 200px;
+          width: 200px;
+          height: 112.5px;
+        }
+
+        img {
+          max-width: 175px;
+          height: auto;
+          object-fit: cover;
+          //change to contain once all images come to the 16:9 ratio
+
+          @include grid-media($blavity-grid-desktop-configuration) {
+            max-width: 190px;
+            width: 190px;
+            height: 106px;
+          }
+
+          @include grid-media($blavity-grid-large-display-configuration) {
+            max-width: 200px;
+            width: 200px;
+            height: 112.5px;
+          }
+        }
+      }
+    }
+
+    .content {
+      .headline {
+        @include blavity-use-font-tt-norms-light();
+
+        font-size: 1rem;
+        color: #FF542F;
+        text-transform: capitalize;
+        margin-top: 0;
+        margin-bottom: 5px;
+
+        a {
+          color: inherit;
+          text-decoration: none;
+        }
+      }
+
+      .text {
+        @include blavity-use-font-tt-norms-regular();
+
+        height: 90px;
+        width: 200px;
+        color: #000000;
+        font-family: "TT Norms";
+        font-size: 14px;
+        line-height: 22px;
+
+        a {
+          color: #000;
+          text-decoration: none;
+        }
+      }
+    }
+  }
+}

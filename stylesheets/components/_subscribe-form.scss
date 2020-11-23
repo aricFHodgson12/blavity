@@ -1,0 +1,102 @@
+@import '~/stylesheets/common/_shared.scss';
+
+.subscribe-box {
+    .subscribe-container {
+        display: none;
+
+        @include grid-media($blavity-grid-desktop-configuration) {
+        border-bottom: 2px solid rgba(#35312E, .25);
+        border-top: 2px solid rgba(#35312E, .25);
+        display: flex;
+        margin-bottom: 24px;
+        padding: 34px 0 41px;
+        }
+
+        .subscribe-box-title {
+        @include blavity-use-font-tt-norms-regular;
+
+        flex: 1;
+        font-size: 28px;
+        line-height: 32px;
+
+        i {
+            @include blavity-use-font-miller-display-bold-italic;
+        }
+        }
+
+        .subscribe-form {
+        display: flex;
+        flex: 1;
+        flex-direction: column;
+        position: relative;
+
+        button[type="submit"] {
+            background-image: url('https://storage.googleapis.com/blavitynews/assets/images/right-arrow_black.png');
+            border: none;
+            cursor: pointer;
+            padding: 0;
+            position: absolute;
+            top: 4px;
+            right: 0;
+            height: 9px;
+            width: 19px;
+
+            &:focus {
+            outline: none;
+            }
+        }
+
+        input[type="email"] {
+            @include blavity-use-font-tt-norms-regular;
+
+            border: none;
+            border-bottom: 2px solid #35312E;
+            font-size: 16px;
+            line-height: 22px;
+            margin-bottom: 15px;
+            padding-bottom: 16px;
+
+            &:focus {
+            outline: none;
+            }
+        }
+
+        input[type="checkbox"] {
+            margin-right: 7px;
+        }
+
+        label {
+            @include blavity-use-font-tt-norms-regular;
+
+            color: #35312E;
+            font-size: 12px;
+            line-height: 16px;
+
+            a {
+            color: #35312E;
+            font-weight: bold;
+            text-decoration: none;
+            }
+        }
+        }
+    }
+    .submit-done{
+        @include grid-media($blavity-grid-desktop-configuration) {
+            border-bottom: 2px solid rgba(#35312E, .25);
+            border-top: 2px solid rgba(#35312E, .25);
+            display: flex;
+            margin-bottom: 24px;
+            padding: 34px 0 41px;
+        }
+
+        &__title {
+            @include blavity-use-font-tt-norms-regular;
+        }
+
+        &__close-icon {
+            display: inline-block;
+            padding-left: 15px;
+            transform: rotate(45deg) scale(2);
+        }
+    }
+}

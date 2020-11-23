@@ -1,0 +1,65 @@
+@import '~/stylesheets/common/_shared.scss';
+
+.article-card {
+  border-top: 1px solid rgba(#35312E, .25);
+  display: flex;
+  padding: 24px 0;
+
+  a {
+    text-decoration: none;
+  }
+
+  .thumb-container {
+    @include grid-media($blavity-grid-mobile-configuration) {
+      width: 148px;
+      height: 98.44px;
+    }
+
+    .image-wrapper-4x3{
+      position: relative;
+      
+      @include grid-media($blavity-grid-mobile-configuration) {
+        width: 148px;
+        height: 98.44px;
+      }
+    }
+
+    img {
+      object-fit: contain;
+
+      @include grid-media($blavity-grid-mobile-configuration) {
+        width: 148px;
+        height: 98.44px;
+      }
+    }
+  }
+
+  .article-content {
+    margin-left: 17px;
+  }
+
+  .category-link-container {
+    margin-bottom: 3px;
+  }
+
+  .category-link {
+    font-family: 'TT Norms';
+    font-style: normal;
+    font-weight: 500;
+    color: #FF542F;
+    font-size: 12px;
+    letter-spacing: 1px;
+    line-height: 15px;
+    text-transform: uppercase;
+  }
+
+  .article-title {
+    font-family: 'TT Norms';
+    font-style: normal;
+    font-weight: 400;
+
+    color: #000000;
+    font-size: 14px;
+    line-height: 18px;
+  }
+}

@@ -1,0 +1,130 @@
+@import '~/stylesheets/common/_shared.scss';
+
+body.page-home{
+.video-small-card {
+  img {
+    object-fit: cover;
+    object-position: center;
+    width: 100%;
+  }
+
+  .video-small-card__mobile {
+    padding: 0 .5rem;
+    position: relative;
+
+    img {
+      height: 100vw;
+    }
+
+    .btn-play {
+      background-color: #ffffff;
+      border: none;
+      clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%, 0 0, 30% 23%, 30% 77%, 75% 50%, 30% 23%);
+      display: block;
+      height: 2rem;
+      width: 2rem;
+
+      &:focus {
+        outline: none;
+      }
+    }
+
+    .content {
+      background: linear-gradient(to bottom, rgba(#000000, 0), rgba(#000000, 0) 50%, rgba(#000000, .9) 70%, rgba(#000000, .9));
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      padding: 3rem 1.5rem;
+      position: absolute;
+      top: 0;
+      left: .5rem;
+      height: 100%;
+      width: calc(100% - 1rem);
+    }
+
+    .content__header {
+      display: flex;
+      align-items: center;
+      margin-bottom: 1rem;
+
+      h3 {
+        color: #ffffff;
+        font-weight: 400;
+        margin-left: 1rem;
+        text-transform: uppercase;
+      }
+    }
+
+    .tags-container {
+      margin-bottom: .5rem;
+    }
+
+    .video-title {
+      color: #ffffff;
+    }
+  }
+
+  .video-small-card__desktop {
+    display: flex;
+    cursor: pointer;
+
+    .video-title {
+      margin-left: 1rem;
+      cursor: pointer;
+    }
+
+    .thumb-container {
+      cursor: pointer;
+      position: relative;
+      width: 120px;
+
+      &:hover:after {
+        color: #ffffff;
+      }
+
+      &:after {
+        color: rgba(#ffffff, .8);
+        content: '\25B7';
+        display: block;
+        font-size: 24px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+    }
+  }
+
+  &.video-small-card__active {
+    border: 2px solid #000000;
+    padding: 1rem .5rem;
+
+    .video-small-card__desktop {
+      .thumb-container {
+        width: calc(120px - 2px - .5rem);
+      }
+    }
+
+    &.video-small-card__playing {
+      .video-small-card__desktop {
+        position: relative;
+
+        &:after {
+          @include blavity-use-font-tt-norms-light();
+
+          content: 'Now Playing';
+          background-color: rgba(#ffffff, .8);
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          position: absolute;
+          top: 0;
+          left: 0;
+          height: 100%;
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+}

@@ -1,0 +1,53 @@
+$blavity-mq-default-breakpoint: '(max-width: 374.9999999999px)';
+$blavity-mq-mobile-breakpoint: '(min-width: 375px)';
+$blavity-mq-tablet-breakpoint: '(min-width: 768px)';
+$blavity-mq-desktop-breakpoint: '(min-width: 1024px)';
+$blavity-mq-large-display-breakpoint: '(min-width: 1920px)';
+
+$blavity-mq-types: (
+  default: 'screen and #{$blavity-mq-default-breakpoint}',
+  mobile: 'screen and #{$blavity-mq-mobile-breakpoint}',
+  tablet: 'screen and #{$blavity-mq-tablet-breakpoint}',
+  desktop: 'screen and #{$blavity-mq-desktop-breakpoint}',
+  large-display: 'screen and #{$blavity-mq-large-display-breakpoint}'
+);
+
+$blavity-grid-default-configuration: (
+  columns: 4,
+  gutter: 1rem,
+  media: #{
+    map-get($blavity-mq-types, default)
+  }
+);
+
+$blavity-grid-mobile-configuration: (
+  columns: 4,
+  gutter: 1rem,
+  media: #{
+    map-get($blavity-mq-types, mobile)
+  }
+);
+
+$blavity-grid-tablet-configuration: (
+  columns: 8,
+  gutter: 1.5rem,
+  media: #{
+    map-get($blavity-mq-types, tablet)
+  }
+);
+
+$blavity-grid-desktop-configuration: (
+  columns: 12,
+  gutter: 1.5rem,
+  media: #{
+    map-get($blavity-mq-types, desktop)
+  }
+);
+
+$blavity-grid-large-display-configuration: (
+  columns: 12,
+  gutter: 1.5rem,
+  media: #{
+    map-get($blavity-mq-types, large-display)
+  }
+);

@@ -1,0 +1,449 @@
+@import '~/stylesheets/common/_shared.scss';
+
+body.page-article {
+  max-width: 100vw;
+  overflow-x: hidden;
+  .page-content {
+    padding-top: 24px;
+
+    @include grid-media($blavity-grid-desktop-configuration) {
+      padding-top: 35px;
+    }
+
+    .container {
+      padding-left: 2rem;
+      padding-right: 2rem;
+
+      @include grid-media($blavity-grid-mobile-configuration) {
+        padding-left: 2rem;
+        padding-right: 2rem;
+      }
+
+      @include grid-media($blavity-grid-tablet-configuration) {
+        padding-left: 3rem;
+        padding-right: 3rem;
+      }
+
+      @include grid-media($blavity-grid-desktop-configuration) {
+        padding-left: 6rem;
+        padding-right: 6rem;
+      }
+
+      @include grid-media($blavity-grid-large-display-configuration) {
+        padding-left: 6rem;
+        padding-right: 6rem;
+      }
+    }
+
+    .main-section {
+      width: 100%;
+    }
+
+    .article-standard-header {
+      margin-bottom: 22px;
+    }
+
+    .article-social-left-container {
+      display: none;
+
+      @include grid-media($blavity-grid-desktop-configuration) {
+        display: inline-block;
+        position: sticky;
+        top: 168px;
+        z-index: 0;
+        width: 48px;
+        left: 0;
+      }
+    }
+
+    section {
+      &:first-of-type {
+        .container {
+          @include grid-media($blavity-grid-desktop-configuration) {
+            margin-top: -216px;
+          }
+        }
+      }
+    }
+
+    main, .main {
+      @include grid-media($blavity-grid-default-configuration, $blavity-grid-mobile-configuration) {
+        @include grid-column(4);
+      }
+
+      @include grid-media($blavity-grid-tablet-configuration, $blavity-grid-desktop-configuration, $blavity-grid-large-display-configuration) {
+        @include grid-column(8);
+      }
+
+      @include grid-media($blavity-grid-desktop-configuration) {
+        padding-right: 24px;
+        padding-top: 24px;
+      }
+    }
+
+
+    aside {
+      display: none;
+
+      @include grid-media($blavity-grid-desktop-configuration, $blavity-grid-large-display-configuration) {
+        @include grid-column(4);
+        display: block;
+        position: relative;
+        .sticky {
+          display: inline-block;
+          position: sticky;
+          top: 144px;
+          z-index: 0;
+          width: 100%;
+          .ds_width {
+            margin-left: auto !important;
+            margin-right: auto !important;
+          }
+        }
+      }
+    }
+
+    .advertisement {
+      text-align: center;
+      margin-bottom: 40px;
+
+      &:before {
+        @include blavity-use-font-tt-norms-light;
+
+        content: 'advertisement';
+        display: block;
+        font-size: .75rem;
+        line-height: 16px;
+        margin-bottom: 8px;
+        text-transform: capitalize;
+      }
+    }
+
+    .article-body {
+      max-width: 100%;
+      overflow: hidden;
+
+      @include grid-media($blavity-grid-desktop-configuration) {
+        padding: 0 24px;
+      }
+
+      .advertisement {
+        border-bottom: 1px solid rgba(#35312E, .25);
+        border-top: 1px solid rgba(#35312E, .25);
+        padding: 22px 0;
+      }
+
+      .article-social-bottom {
+        margin-bottom: 40px;
+        margin-top: 35px;
+      }
+
+      .article-comments {
+        // border-bottom: 1px solid rgba(#35312E, .25);
+        // border-top: 1px solid rgba(#35312E, .25);
+        margin-bottom: 27px;
+        padding: 24px 0;
+      }
+
+      // & + hr {
+      //   border-color: #35312E;
+      //   margin: 0;
+
+      //   @include grid-media($blavity-grid-desktop-configuration) {
+      //     margin-right: 24px;
+      //   }
+      // }
+    }
+
+    .article-body-block {
+      max-width: 100vw;
+      display: flex;
+      flex-direction: column;
+      .twitter-tweet {
+        align-self: center;
+      .EmbeddedTweet--cta .EmbeddedTweet-tweet{
+        text-align: center;
+        margin: 0 auto;
+      }
+    }
+ span.content-image-caption {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   box-shadow: 0.5rem 2rem 3rem 0.5rem rgba(0,0,0,0.2);
+   transition: 0.3s;
+   margin-bottom: 2rem;
+   padding: 1rem;
+   color: #FF542F;
+   font-family: "TT Norms";
+    img {
+      margin-bottom: .5rem;
+    }
+ }
+    .iframe-center {
+      display: flex;
+      align-content: center;
+      align-self: center;
+      @include grid-media($blavity-grid-desktop-configuration, $blavity-grid-default-configuration) {
+        width: 365px;
+        height: 365px;
+        max-width: 100vw;
+      }
+      @include grid-media($blavity-grid-desktop-configuration){
+        width: 100%;
+        max-width: 600px;
+      }
+
+    }
+
+    img {
+      object-fit: contain;
+      align-self: center;
+    }
+
+      a {
+        display: inline-flex;
+        text-decoration: none;
+      }
+
+      figure {
+        margin: 0;
+      }
+
+      div,
+      figure,
+      img {
+        max-width: 100%;
+      }
+
+      p {
+        @include blavity-use-font-tt-norms-regular;
+
+        margin: 0 0 16px;
+        padding: 0;
+
+        @include grid-media($blavity-grid-default-configuration, $blavity-grid-mobile-configuration, $blavity-grid-desktop-configuration) {
+          font-weight: 300;
+          font-size: calc(1.125rem + .0625vw);
+          line-height: 1.625rem;
+        }
+      }
+    }
+  .article-body-block-wrapper:first-of-type {
+   .article-body-block:first-child  {
+      p:first-of-type:first-letter {
+        font-size: 64px;
+        line-height: 75px;
+
+        @include grid-media($blavity-grid-desktop-configuration) {
+          font-size: 64px;
+          line-height: 75px;
+        }
+      }
+    }
+  }
+  hr {
+    display: none;
+  }
+  hr.block-hr {
+    display:block;
+    width: 100%;
+  }
+    .tags {
+      color: #FF542F;
+      font-family: "TT Norms";
+      font-size: 1.25rem;
+      font-weight: 500;
+      line-height: 36px;
+      display: flex;
+      flex-wrap: wrap;
+      margin-bottom: 16px;
+      .slug {
+        text-decoration: none;
+        color: #FF542F;
+        font-family: "TT Norms";
+      }
+
+      @include grid-media($blavity-grid-desktop-configuration) {
+        line-height: 32px;
+        flex-wrap: wrap;
+        margin-bottom: 32px;
+      }
+
+      ::after {
+        content: ", ";
+        color: black;
+        white-space: pre;
+      }
+
+      :last-child:after {
+        content: '';
+      }
+    }
+
+    .article-most-popular {
+      .sub-title {
+        @include blavity-use-font-tt-norms-regular();
+
+        border-bottom: 2px solid #35312E;
+        font-size: 24px;
+        line-height: 40px;
+        margin-bottom: 22px;
+        padding-bottom: 13px;
+        text-transform: capitalize;
+      }
+
+      .articles-container {
+        counter-reset: counter;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+
+        li {
+          border-bottom: 1px solid rgba(#35312E, .25);
+          counter-increment: counter;
+          display: flex;
+          margin-bottom: 24px;
+          padding-bottom: 25px;
+
+          &:before {
+            @include blavity-use-font-tt-norms-light();
+
+            content: counter(counter) ". ";
+            font-size: 1.5rem;
+            line-height: 32px;
+            margin-right: 16px;
+          }
+
+          a {
+            @include blavity-use-font-tt-norms-regular();
+
+            color: #000000;
+            font-size: 1rem;
+            line-height: 22px;
+            text-decoration: none;
+          }
+        }
+      }
+    }
+    .instagram-media, .instagram-media-rendered, blockquote {
+      align-self: center;
+      margin: 0 auto;
+    }
+
+    .discover-more {
+      border-bottom: 2px solid #35312E;
+      border-top: 2px solid #35312E;
+      margin-bottom: 54px;
+      padding: 38px 0 34px;
+      width: 100%;
+
+      .sub-title {
+        @include blavity-use-font-tt-norms-regular();
+
+        color: #35312E;
+        font-size: 1rem;
+        line-height: 24px;
+        margin-bottom: 18px;
+        text-transform: capitalize;
+        text-align: center;
+
+        @include grid-media($blavity-grid-desktop-configuration) {
+          font-size: 1.5rem;
+          line-height: 40px;
+          margin-bottom: 13px;
+        }
+      }
+
+      .article-card {
+        @include grid-media($blavity-grid-default-configuration, $blavity-grid-mobile-configuration, $blavity-grid-tablet-configuration) {
+          @include grid-column(4);
+        }
+
+        @include grid-media($blavity-grid-desktop-configuration, $blavity-grid-large-display-configuration) {
+          @include grid-column(3);
+        }
+      }
+    }
+
+    .subscribe-box {
+      display: none;
+
+      @include grid-media($blavity-grid-desktop-configuration) {
+        border-bottom: 2px solid rgba(#35312E, .25);
+        border-top: 2px solid rgba(#35312E, .25);
+        display: flex;
+        margin-bottom: 24px;
+        padding: 34px 0 41px;
+      }
+
+      .subscribe-box-title {
+        @include blavity-use-font-tt-norms-regular;
+
+        flex: 1;
+        font-size: 1.75rem;
+        line-height: 32px;
+
+        i {
+          @include blavity-use-font-miller-display-bold-italic;
+        }
+      }
+
+      .subscribe-form {
+        display: flex;
+        flex: 1;
+        flex-direction: column;
+        position: relative;
+
+        button[type="submit"] {
+          background-image: url('https://storage.googleapis.com/blavitynews/assets/images/right-arrow_black.png');
+          border: none;
+          cursor: pointer;
+          padding: 0;
+          position: absolute;
+          top: 4px;
+          right: 0;
+          height: 9px;
+          width: 19px;
+
+          &:focus {
+            outline: none;
+          }
+        }
+
+        input[type="email"] {
+          @include blavity-use-font-tt-norms-regular;
+
+          border: none;
+          border-bottom: 2px solid #35312E;
+          font-size: 1rem;
+          line-height: 22px;
+          margin-bottom: 15px;
+          padding-bottom: 16px;
+
+          &:focus {
+            outline: none;
+          }
+        }
+
+        input[type="checkbox"] {
+          margin-right: 7px;
+        }
+
+        label {
+          @include blavity-use-font-tt-norms-regular;
+
+          color: #35312E;
+          font-size: .75rem;
+          line-height: 16px;
+
+          a {
+            color: #35312E;
+            font-weight: bold;
+            text-decoration: none;
+          }
+        }
+      }
+    }
+  }
+}

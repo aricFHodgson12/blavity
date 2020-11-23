@@ -1,0 +1,280 @@
+@import '~/stylesheets/common/_shared.scss';
+
+.author-pent-tile-view {
+    display: flex;
+    flex-direction: column;
+    font-family: 'TT Norms';
+    @include grid-media($blavity-grid-desktop-configuration) {
+      width: 57vw;
+    }
+
+.heading-container {
+  display: flex;
+  flex-direction: column;
+  align-content: flex-start;
+  align-items: center;
+  margin: 2rem 0 2rem .5rem;
+
+  @include grid-media($blavity-grid-desktop-configuration) {
+    align-items: flex-start;
+  }
+  h2 {
+      @include blavity-use-font-tt-norms-light();
+      font-size: 1.5rem !important;
+      order: 1;
+      justify-content: center;
+
+      @include grid-media($blavity-grid-desktop-configuration) {
+        justify-content: flex-start;
+        align-items: flex-start;
+        font-size: 2rem !important;
+        width: 40vw !important;
+      }
+  }
+}
+
+    &__large-display {
+        align-content: flex-start;
+        width: 57vw;
+
+        .query::after {
+            content: 'x';
+            font-size: 18px;
+            font-weight: 500;
+            margin-left: 50px;
+        }
+    }
+
+.tile {
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.tile .small-card .small-card-mobile {
+    margin-bottom: 30px;
+}
+
+.row-big{
+    order: 2;
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 20px;
+    justify-content: space-around;
+}
+
+.row-small{
+    order: 3;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: space-around;
+}
+
+.tile-category{
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    line-height: 15px;
+    min-height: 18px;
+}
+
+.tile-title {
+    font-weight: 400;
+    margin-bottom: 52px;
+    font-size: 16px;
+    line-height: 20px;
+    @include grid-media($blavity-grid-desktop-configuration) {
+        font-size: 14px;
+        line-height: 22px;
+
+    }
+}
+
+.big-card {
+    line-height: 28px;
+    margin-right: 35px;
+
+    a {
+        display: inline-block;
+        max-width: 25vw;
+        text-decoration: none;
+        color: black;
+    }
+
+    .title .tile-card {
+        max-width: 25vw;
+    }
+
+    img.img-fluid {
+        max-width: 25vw;
+        min-height: 20vw;
+        object-fit: cover;
+    }
+
+    .tile-category{
+        margin: 17px 0 10px 0;
+    }
+
+    .tile-title {
+        font-size: 20px;
+    }
+}
+
+.small-card {
+    font-size: 14px;
+    line-height: 20px;
+    margin-right: 40px;
+
+    a {
+        display: inline-block;
+        width: 16vw;
+        text-decoration: none;
+        color: black;
+      }
+
+    .title .tile-card {
+        width: 16vw;
+    }
+
+    img.img-fluid {
+        width: 16vw;
+        height: 13.5vw;
+        object-fit: cover;
+    }
+
+
+    .tile-category{
+        margin: 11px 0 10px 0;
+    }
+}
+
+
+.small-card-mobile {
+    height: auto;
+    margin: 1.5rem 0px;
+    font-family: 'TT Norms';
+    font-size: 16px;
+    line-height: 22px;
+    width: 97.5vw;
+    max-width: 375px;
+    padding: 0 .5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+
+    &:last-child {
+        margin-bottom: 3rem;
+    }
+
+
+    a {
+        text-decoration: none;
+        color: black;
+      }
+
+    .tile-img {
+        width: 300px;
+
+        @media (max-width: 360px) {
+            width: 250px;
+        }
+
+    }
+
+    img.img-fluid {
+        width: 300px;
+        height: 169px;
+        object-fit: cover;
+
+        @media (max-width: 360px) {
+            width: 250px;
+            height: 141px;
+        }
+
+    }
+
+    .desc {
+        width: 300px;;
+        height: auto;
+        max-height: 90px;
+        display: flex;
+        flex-direction: column;
+
+        @media (max-width: 360px) {
+            width: 250px;
+        }
+    }
+
+    .tile-category{
+        margin: 0 0 10px 0;
+    }
+
+}
+
+.title:after {
+    content:"";
+    display: inline-block;
+    height: 0.5em;
+    vertical-align: bottom;
+    width: 100%;
+    margin-right: -100%;
+    margin-left: 10px;
+    border-top: 1px solid black;
+}
+.button-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+button {
+    order: 4;
+    outline: none;
+    height: 65px;
+    width: 360px;
+    border: 2px solid #EFEFEF;
+    background-color: #F7F6F8;
+    font-weight: 500;
+    font-family: 'TT Norms';
+    font-size: 18px;
+    line-height: 24px;
+    text-align: center;
+    z-index: 999;
+
+    @include grid-media($blavity-grid-desktop-configuration) {
+        width: 213px;
+    }
+}
+}
+}
+
+.author-results__button-container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.author-results__btn-load-more {
+    height: 65px;
+    width: 340px;
+    border: 2px solid #EFEFEF;
+    background-color: #F7F6F8;
+    cursor: pointer;
+    font-weight: 500;
+    font-family: 'TT Norms';
+    font-size: 18px;
+    line-height: 24px;
+    outline: none;
+    padding: 0;
+    text-align: center;
+
+    @media (max-width: 360px) {
+        width: 250px;
+    }
+
+    @include grid-media($blavity-grid-desktop-configuration) {
+        width: 213px;
+    }
+}

@@ -1,0 +1,218 @@
+@import '~/stylesheets/common/_shared.scss';
+
+.sponsored-pent-tile-view {
+    display: flex;
+    flex-direction: column;
+    font-family: 'TT Norms';
+
+    .tile {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .tile .small-card .small-card-mobile {
+        margin-bottom: 30px;
+    }
+
+    .row-big{
+        order: 2;
+        display: flex;
+        flex-direction: row;
+        margin-bottom: 57px;
+        justify-content: space-around;
+    }
+
+    .row-small{
+        order: 3;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-content: center;
+        justify-content: space-around;
+    }
+
+    .tile-category{
+        font-size: 12px;
+        font-weight: 500;
+        letter-spacing: 1px;
+        line-height: 15px;
+        min-height: 18px;
+    }
+
+    .tile-title {
+        font-weight: 400;
+        margin-bottom: 52px;
+        font-size: 16px;
+        line-height: 20px;
+    }
+
+    .big-card {
+        line-height: 0px;
+        margin-right: 25px;
+
+        a {
+            display: inline-block;
+            max-width: 30vw;
+            text-decoration: none;
+            color: black;
+        }
+
+        .title .tile-card {
+            max-width: 30vw;
+        }
+
+        img.img-fluid {
+            width: 30vw;
+            min-height: 20vw;
+            object-fit: cover;
+        }
+        .desc {
+            background-color: white;
+            padding: 0 10px 0 20px;
+            height: 140px;
+            width: 30vw;
+            border: 1px solid #CCCBCB;;
+        }
+        .tile-category{
+            margin: 17px 0 10px 0;
+        }
+
+        .tile-title {
+            font-size: 20px;
+        }
+    }
+
+    .small-card {
+        font-size: 14px;
+        margin-right: 40px;
+
+        a {
+            display: inline-block;
+            text-decoration: none;
+            color: black;
+          }
+
+        .title .tile-card {
+            width: 18.5vw;
+        }
+
+        img.img-fluid {
+            width: 18.5vw;
+            height: 13.5vw;
+            object-fit: cover;
+        }
+
+        .desc {
+            background-color: white;
+            height: 140px;
+            width: 18.5vw;
+            border: 1px solid #CCCBCB;;
+        }
+
+        .tile-category{
+            margin: 11px 0 10px 10px;
+        }
+
+        .tile-title {
+            padding-left: 10px;
+            flex-wrap: wrap;
+        }
+    }
+
+    .small-card-mobile {
+        height: auto;
+        font-family: 'TT Norms';
+        font-size: 16px;
+        line-height: 22px;
+        width: 97.5vw;
+        max-width: 375px;
+        padding: 0 .5rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 10px;
+
+
+        a {
+            text-decoration: none;
+            color: black;
+          }
+
+        .tile-img {
+            width: 300px;
+            height: 175px;
+
+            @media (max-width: 360px) {
+                width: 250px;
+            }
+        }
+
+        img.img-fluid {
+            width: 300px;
+            height: 169px;
+            object-fit: cover;
+
+            @media (max-width: 360px) {
+                width: 250px;
+                height: 141px;
+            }
+        }
+
+        .desc {
+            width: 300px;
+            height: auto;
+            max-height: 90px;
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 10px;
+            // background-color: white;
+            // border: 1px solid grey;
+
+            @media (max-width: 360px) {
+                width: 250px;
+            }
+        }
+
+        .tile-category{
+            margin: 0 0 15px 0;
+            line-height: 16px;
+        }
+
+    }
+
+    .title:after {
+        content:"";
+        display: inline-block;
+        height: 0.5em;
+        vertical-align: bottom;
+        width: 100%;
+        margin-right: -100%;
+        margin-left: 10px;
+        border-top: 1px solid black;
+    }
+    .button-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+      
+        button {
+            order: 4;
+            outline: none;
+            height: 65px;
+            width: 360px;
+            border: 2px solid #EFEFEF;
+            background-color: #F7F6F8;
+            font-weight: 500;
+            font-family: 'TT Norms';
+            font-size: 18px;
+            line-height: 24px;
+            text-align: center;
+            z-index: 999;
+
+            @media (max-width: 360px) {
+                width: 250px;
+            }
+        }
+    }
+}

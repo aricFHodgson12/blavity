@@ -1,0 +1,25 @@
+@import '~/stylesheets/common/_shared.scss';
+
+amp-sticky-ad {
+  background: #f9f9f9;
+  padding: 8px 0;
+  &:before {
+    @include blavity-use-font-tt-norms-light;
+    content: 'advertisement';
+    display: block;
+    font-size: .65rem;
+    line-height: 16px;
+    margin-bottom: 4px;
+    text-transform: capitalize;
+  }
+  .amp-sticky-ad-top-padding {
+    height: 0;
+  }
+  .amp-sticky-ad-close-button {
+    top: 18px;
+    box-shadow: none;
+    background-color: #f9f9f9;
+    background-size: 10px 10px;
+    border-radius: 0;
+  }
+}

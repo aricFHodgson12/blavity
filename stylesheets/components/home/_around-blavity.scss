@@ -1,0 +1,44 @@
+@import '~/stylesheets/common/_shared.scss';
+
+.around-blavity {
+  width: 280px;
+  font-family: 'TT Norms';
+
+  &__heading {
+    border-bottom: 2px solid #000;
+    text-align: center;
+    margin-top: 40px;
+    height: 40px;
+    color: #000000;
+    font-size: 24px;
+    font-weight: 200;
+    }
+
+  &__item {
+    display: flex;
+    padding: 24px 0;
+    border-bottom: 1px solid #35312e38;
+
+    &__number {
+      &__span-number {
+        color: #000000;
+        font-size: 24px;
+        line-height: 22px;
+      }
+    }
+
+    &__detail {
+      a {
+        text-decoration: none;
+      }
+
+      &__p-detail {
+        margin: 0;
+        padding-left: 16px;
+        color: #000000;
+        font-size: 14px;
+        line-height: 22px;
+      }
+    }
+  }
+}

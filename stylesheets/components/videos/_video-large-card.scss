@@ -1,0 +1,49 @@
+@import '~/stylesheets/common/_shared.scss';
+
+.video-large-card {
+  z-index: 10001;
+  .player-container {
+    z-index: 10001;
+    @include grid-media($blavity-grid-desktop-configuration) {
+      margin-bottom: 2rem;
+    }
+  }
+
+  .text-container {
+    padding-right: 4rem;
+  }
+
+  .tags-container {
+    margin-bottom: 1rem;
+  }
+
+  .home-videos-tags .tag {
+    text-transform: uppercase;
+  }
+
+  .video-title {
+    @include blavity-use-font-tt-norms-light();
+
+    font-size: 1.5rem;
+    font-weight: 400;
+
+    @include grid-media($blavity-grid-desktop-configuration) {
+      font-size: 2rem;
+    }
+  }
+
+  &.video-large-card__mobile {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .player-container {
+      flex: 1;
+    }
+  }
+}

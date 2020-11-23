@@ -1,0 +1,135 @@
+@import "node_modules/bootstrap/scss/bootstrap";
+@import '~/stylesheets/common/_shared.scss';
+
+.query-page {
+
+    display: flex;
+    flex-direction: column;
+    width: calc(100vw-364px);
+    justify-content: center;
+    margin: 0 1rem;
+    .search-row {
+        order: 1;
+        display: flex;
+        flex-direction: row;
+        align-content: center;
+        @include grid-media($blavity-grid-desktop-configuration) {
+          margin: 0 5rem;
+          // margin-left: 50px;
+        }
+
+    }
+
+    .discover-more {
+      order: 2;
+    }
+
+    .advertisement {
+      display: none;
+        @include grid-media($blavity-grid-desktop-configuration) {
+            display: flex;
+            order: 2;
+            text-align: center;
+            align-items: center;
+            margin-bottom: 40px;
+            margin-top: 2rem;
+            flex-direction: column;
+        }
+    
+        &:before {
+          @include blavity-use-font-tt-norms-light;
+    
+          content: 'advertisement';
+          display: flex;
+          font-size: 12px;
+          line-height: 16px;
+          margin-bottom: 8px;
+          text-transform: capitalize;
+          color: gray;
+        }
+
+      .ad-two {
+        
+        @include grid-media($blavity-grid-desktop-configuration) {
+          display: flex;
+          justify-content: center;
+          width: 50px;
+        }
+      }
+    }
+
+      .line {
+        display: none;
+        // @include grid-media($blavity-grid-desktop-configuration) {
+        //   order: 2;
+        //   display: flex;
+        //   border-bottom: 1px solid gray;
+        //   width: 55vw;
+        //   align-content: center;
+        //   margin-bottom: 5px;
+        // }
+      }
+
+      .ad-one {
+        display: none; 
+
+        @include grid-media($blavity-grid-desktop-configuration) {
+          margin-left: 100px;
+
+        &:before {
+            @include blavity-use-font-tt-norms-light;
+      
+            content: 'advertisement';
+            display: block;
+            font-size: 12px;
+            line-height: 16px;
+            margin-bottom: 8px;
+            text-transform: capitalize;
+            color: gray;
+            text-align: center;
+            margin-top: 20px;
+          }
+
+        }
+      }
+
+      .discover-more {
+        display: none;
+        @include grid-media($blavity-grid-desktop-configuration) {
+        display: flex;
+        justify-content: center;
+        margin-top: 40px;
+        margin-bottom: 80px;
+        height: 400px;
+        width: 90vw;
+  
+        .sub-title {
+          @include blavity-use-font-tt-norms-regular();
+  
+          color: #35312E;
+          font-size: 16px;
+          line-height: 24px;
+          margin-bottom: 18px;
+          text-transform: capitalize;
+          text-align: center;
+  
+          @include grid-media($blavity-grid-desktop-configuration) {
+            font-size: 24px;
+            line-height: 40px;
+            margin-bottom: 13px;
+
+          }
+        }
+  
+        .article-card {
+          @include grid-media($blavity-grid-default-configuration, $blavity-grid-mobile-configuration, $blavity-grid-tablet-configuration) {
+            @include grid-column(4);
+          }
+  
+          @include grid-media($blavity-grid-desktop-configuration, $blavity-grid-large-display-configuration) {
+            @include grid-column(3);
+          }
+        }
+      }
+    }
+}

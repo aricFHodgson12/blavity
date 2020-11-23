@@ -1,0 +1,46 @@
+@import '~/stylesheets/common/_shared.scss';
+
+.page-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 100vw;
+  font-family: 'TT Norms';
+  header {
+    margin: 4rem 0;
+    h1 {
+      text-align: center;
+      color : #FF5425;
+      font-size: 4.5rem;
+    }
+    p {
+      text-align: center;
+      font-size: 2rem;
+    }
+  }
+
+  .blavity-original-slider {
+    order: 3;
+    width: 100%;
+    background-color: #FF542F;
+    margin-bottom: 50px;
+    z-index: 99;
+    @include grid-media($blavity-grid-desktop-configuration) {
+      order: 2;
+    }
+
+    .slick-slider {
+      overflow: hidden;
+    }
+
+    .slick-slide {
+      width: 100%;
+    }
+
+    .slick-next,
+    .slick-prev {
+      display: none !important;
+      opacity: 0;
+    }
+  }
+}

@@ -1,0 +1,74 @@
+@import '~/stylesheets/common/_shared.scss';
+
+.category-tri-tile {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  margin-bottom: 2rem;
+  max-width: 100%;
+  @include grid-media($blavity-grid-desktop-configuration) {
+    max-width: 918px;
+  }
+
+  &__slot {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    @include grid-media($blavity-grid-desktop-configuration) {
+      flex-direction: row;
+      &__left {
+        align-self: flex-start;
+        flex-basis: 70%;
+
+        .tile {
+          width: 90%;
+          margin: 0 1rem;
+          &__img {
+            &__fluid {
+              width: 48vw;
+              height: 36vw;
+              max-width: 100%;
+              max-height: 480px;
+              object-fit: cover;
+            }
+          }
+
+          &__desc {
+            &__tile-category {
+              font-size: 12px;
+              font-weight: 500;
+              letter-spacing: 1px;
+              line-height: 32px;
+              min-height: 18px;
+              a {
+               text-decoration: none;
+              }
+            }
+
+            &__tile-title {
+
+              color: #000000;
+              font-family: "TT Norms";
+              font-size: 40px;
+              font-weight: 400;
+              line-height: 52px;
+
+              a {
+                text-decoration: none;
+                color: #000000;
+              }
+            }
+          }
+        }
+      }
+
+      &__right {
+        align-self: flex-start;
+        margin-top: 0;
+        flex-basis: 30%;
+      }
+    }
+  }
+}

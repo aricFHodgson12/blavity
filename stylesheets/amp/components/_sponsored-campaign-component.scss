@@ -1,0 +1,39 @@
+@import '~/stylesheets/common/_shared.scss';
+
+.sponsored-campaign-component {
+    display: flex;
+    flex-direction: column;
+    height: 85rem;
+    background-color: #ECF0F4;
+
+    &__title {
+        order: 1;
+        text-align: center;
+        margin-top: 4rem;
+        font-family: 'TT Norms';
+        font-size: 1.125rem;
+        letter-spacing: 1px;
+    }
+
+    &__logo {
+        order: 2;
+        align-self: center;
+        margin-top: 1.5rem;
+        width: 350px;
+        text-align: center;
+        margin-bottom: 60px;
+
+        amp-img {
+            width: 310px;
+            height: 61px;
+            margin: 0 auto;
+        }
+
+    }
+
+    &__pent-tile {
+        order: 3;
+        align-self: center;
+        margin: 0 0 0 0;
+    }
+}

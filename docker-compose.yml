@@ -1,0 +1,8 @@
+version: '3'
+services:
+  blavity.com:
+    ports:
+      - "0.0.0.0:3000:3000"
+    image: blavityinc/blavity.com:latest
+    environment: 
+      - "HOST=0.0.0.0"

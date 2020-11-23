@@ -1,0 +1,48 @@
+@import '~/stylesheets/common/_shared.scss';
+
+    .top-stories-sponsored-card {
+        display: flex;
+        flex-direction: column;
+        border: 1px solid #CDCCCB;
+
+  
+        .thumb-container {
+          flex: 0 0 14rem;
+
+          img.img-fluid {
+              width: 100%;
+              max-height: 200px;
+              object-fit: cover;
+          }
+        }
+        
+        .content {
+            margin: 0 24px;
+
+            .card-title {
+            @include blavity-use-font-tt-norms-light;
+    
+            color: #FF542F;
+            font-size: .75rem;
+            letter-spacing: .5px;
+            line-height: 15px;
+            margin-bottom: 6px;
+            margin-top: 20px;
+            text-transform: capitalize;
+            }
+    
+            .sponsored-content-title {
+                @include blavity-use-font-tt-norms-regular;
+        
+                font-size: 1rem;
+                line-height: 24px;
+                margin-bottom: 26px;  
+            }
+      }
+
+      a {
+        text-decoration: none;
+        color: black;
+        outline: none;
+    }
+    }

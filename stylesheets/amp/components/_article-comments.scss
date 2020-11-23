@@ -1,0 +1,51 @@
+@import '~/stylesheets/common/_shared.scss';
+
+.article-comments {
+  .items {
+    max-width: 960px;
+    width: 100%;
+  }
+  .btn-toggler {
+    font-family: 'TT Norms';
+    font-style: normal;
+    font-weight: 400;
+
+    background-color: transparent;
+    border: none;
+    color: #35312E;
+    cursor: pointer;
+    font-size: 24px;
+    line-height: 40px;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    overflow: hidden;
+    text-align: left;
+    width: 100%;
+
+    &:after {
+      content: '+';
+      font-size: 40px;
+      font-weight: 500;
+      position: absolute;
+      right: 0;
+      transform: rotate(45deg);
+    }
+
+    &:focus {
+      outline: none;
+    }
+  }
+
+  &.collapsed {
+    div.items {
+      display: none;
+    }
+
+    .btn-toggler {
+      &:after {
+        transform: none;
+      }
+    }
+  }
+}

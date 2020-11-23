@@ -1,0 +1,193 @@
+@import '~/stylesheets/common/_shared.scss';
+
+.category-pent-tile-view {
+  font-family: 'TT Norms';
+
+  &__desktop {
+    &__top-row {
+      display: flex;
+      flex-direction: row;
+      width: 100%;
+      .tile {
+        flex-basis: 45%;
+        margin: 0 1rem;
+        &__img {
+          &__fluid {
+            width: 100%;
+            height: calc( .8 * 35vw);
+            object-fit: cover;
+          }
+        }
+
+        &__desc {
+          &__tile-category {
+            font-size: 12px;
+            font-weight: 500;
+            letter-spacing: 1px;
+            line-height: 15px;
+            min-height: 18px;
+            margin: 1rem 0;
+            a {
+             text-decoration: none;
+            }
+          }
+
+          &__tile-title {
+
+            font-weight: 400;
+            margin-bottom: 52px;
+            font-size: 16px;
+            line-height: 20px;
+            @include grid-media($blavity-grid-desktop-configuration) {
+                font-size: 18px;
+                line-height: 28px;
+
+            }
+
+            a {
+              text-decoration: none;
+              color: #000000;
+            }
+          }
+        }
+      }
+    }
+    &__bottom-row {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      .tile {
+        flex-basis: 29%;
+        margin: 0 1rem;
+        &__img {
+          &__fluid {
+            width: 100%;
+            height: calc( .8 * 20vw);
+            object-fit: cover;
+          }
+        }
+
+        &__desc {
+          &__tile-category {
+            font-size: 12px;
+            font-weight: 500;
+            letter-spacing: 1px;
+            line-height: 22px;
+            min-height: 18px;
+            a {
+             text-decoration: none;
+            }
+          }
+
+          &__tile-title {
+
+            font-weight: 400;
+            margin-bottom: 52px;
+            font-size: 16px;
+            line-height: 20px;
+            @include grid-media($blavity-grid-desktop-configuration) {
+                font-size: 16px;
+                line-height: 28px;
+
+            }
+
+            a {
+              text-decoration: none;
+              color: #000000;
+            }
+          }
+        }
+      }
+
+    }
+  }
+  &__mobile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .tile {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 95vw;
+    margin-bottom: 1rem;
+      &__img {
+        flex-basis: 40%;
+        &__fluid {
+          width: 100%;
+          height: 94px;
+          object-fit: cover;
+        }
+      }
+
+      &__desc {
+        flex-basis: 50%;
+        padding: 0 .2rem;
+        &__tile-category {
+          font-size: 12px;
+          font-weight: 500;
+          letter-spacing: 1px;
+          line-height: 15px;
+          min-height: 18px;
+          a {
+           text-decoration: none;
+          }
+        }
+
+        &__tile-title {
+          width: 100%;
+          max-width: 42vw;
+          font-weight: 400;
+          margin-bottom: 52px;
+          font-size: 16px;
+          line-height: 20px;
+          @include grid-media($blavity-grid-desktop-configuration) {
+              font-size: 14px;
+              line-height: 22px;
+
+          }
+
+          a {
+            display: block;
+            max-width: 100%;
+            text-decoration: none;
+            color: #000000;
+          }
+        }
+      }
+    }
+  }
+
+
+  .button-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1rem;
+
+    button {
+      order: 4;
+      outline: none;
+      height: 65px;
+      width: 340px;
+      border: 2px solid #EFEFEF;
+      background-color: #F7F6F8;
+      font-weight: 500;
+      font-family: 'TT Norms';
+      font-size: 18px;
+      line-height: 24px;
+      text-align: center;
+      z-index: 999;
+      cursor: pointer;
+
+      @media (max-width: 360px) {
+        width: 250px;
+      }
+
+      @include grid-media($blavity-grid-desktop-configuration) {
+        width: 213px;
+      }
+    }
+  }
+}

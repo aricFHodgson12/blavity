@@ -1,0 +1,11 @@
+@import '~/stylesheets/amp/common/_typography.scss';
+
+// amp-specific
+.amp-layout {
+  margin-top: 64px;
+  font-family: 'TT Norms';
+}
+
+amp-img.contain img {
+  object-fit: contain;
+}
